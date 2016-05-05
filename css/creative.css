@@ -331,6 +331,10 @@ header .header-content .header-content-inner p {
     color: #f39200;
 }
 
+.text-secondary {
+    color: #5dc5ea;
+}
+
 .no-gutter > [class*=col-] {
     padding-right: 0;
     padding-left: 0;
@@ -482,4 +486,21 @@ ul {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+.card-group {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap; 
+  align-items: stretch;
+}
+
+.card-group {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.card-group .card {
+  display: block;
+  flex-basis: 16.6%; /* change this value for each breakpoint*/
 }
