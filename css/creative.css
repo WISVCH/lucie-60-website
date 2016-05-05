@@ -476,6 +476,10 @@ img::-moz-selection {
     background: 0 0;
 }
 
+ul {
+    text-align:left;
+}
+
 body {
     webkit-tap-highlight-color: #222;
 }
