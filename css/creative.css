@@ -476,13 +476,3 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
-
-ul.nav.navbar-nav.navbar-right{
-    height:75px !important;
-}
-
-.nav.navbar-nav.navbar-right li{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
