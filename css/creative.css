@@ -496,7 +496,14 @@ img::-moz-selection {
     background: 0 0;
 }
 
-
 body {
     webkit-tap-highlight-color: #222;
+}
+
+a.navbar-brand {
+    margin-top: -20px;
+}
+
+img.brand {
+    height: inherit;
 }
