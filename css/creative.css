@@ -56,6 +56,10 @@ p {
     background-color: #f39200;
 }
 
+.bg-secondary {
+    background-color: #5DC5EA;
+}
+
 .bg-dark {
     color: #fff;
     background-color: #222;
@@ -203,12 +207,17 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header-cantus2.jpg);
+    background-color: #5DC5EA;
+    /*background-image: url(../img/header-cantus2.jpg);*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     /*background-size: contain;*/
     -o-background-size: cover;
+}
+
+.cantus {
+    background-image: url(../img/header-cantus2.jpg);
 }
 
 header .header-content {
