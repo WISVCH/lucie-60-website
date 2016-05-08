@@ -208,7 +208,6 @@ header {
     text-align: center;
     color: #fff;
     background-color: #5DC5EA;
-    /*background-image: url(../img/header-cantus2.jpg);*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -243,6 +242,10 @@ header .header-content .header-content-inner p {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,.7);
+}
+
+header .header-content .header-content-inner img {
+    padding-bottom: 25px;
 }
 
 @media(min-width:768px) {
