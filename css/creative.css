@@ -32,6 +32,10 @@ a {
     transition: all .35s;
 }
 
+a.light {
+    color: #eeecec;
+}
+
 a:hover,
 a:focus {
     color: #222;
