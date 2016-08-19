@@ -1376,10 +1376,7 @@ a.text-danger:focus {
   color: #fff;
   background-color: #337ab7;
 }
-a.bg-primary:hover,
-a.bg-primary:focus {
-  background-color: #286090;
-}
+
 .bg-success {
   background-color: #dff0d8;
 }
@@ -6757,4 +6754,9 @@ button.close {
     display: none !important;
   }
 }
+
+hr{
+    margin-bottom: 60px;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
