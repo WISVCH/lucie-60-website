@@ -530,3 +530,9 @@ img.brand {
     vertical-align: middle;
     float: none;
 }
+
+.activity:nth-child(even) {
+    background-color: #8bd1ef;
+    /*border: 2px solid;
+    border-color: #f39200;*/
+}
