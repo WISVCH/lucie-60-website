@@ -531,7 +531,12 @@ img.brand {
     float: none;
 }
 
-.activity:nth-child(even) {
+.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;    
+}
+
+.activity-feed .row:nth-child(even) {
     background-color: #8bd1ef;
     /*border: 2px solid;
     border-color: #f39200;*/
