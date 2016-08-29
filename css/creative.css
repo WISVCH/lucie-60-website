@@ -520,3 +520,7 @@ a.navbar-brand {
 img.brand {
     height: inherit;
 }
+
+.top-buffer { 
+    margin-top:100px; 
+}
