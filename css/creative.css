@@ -524,3 +524,9 @@ img.brand {
 .top-buffer { 
     margin-top:100px; 
 }
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
