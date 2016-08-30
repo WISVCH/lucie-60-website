@@ -13,17 +13,11 @@ header {
 
 #activities .activity:nth-child(2n+1) {
     background-color: #8bd1ef;
-    /*border: 2px solid;
-    border-color: #f39200;*/
 }
 
 img.brand {
 	height: 100%;
 }
-
-/*.navbar-default .navbar-header .navbar-brand {
-	color: #F39200;
-}*/
 
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
@@ -44,4 +38,13 @@ img.brand {
   	.navbar-default.affix .nav > li > a:focus:hover {
     	color: #F39200;
   	}
+}
+
+a.light {
+    color: #eeecec;
+}
+
+a.light:hover,
+a.light:focus {
+	color: #222;
 }
