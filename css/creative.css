@@ -541,3 +541,7 @@ img.brand {
     /*border: 2px solid;
     border-color: #f39200;*/
 }
+
+body{
+    overflow-x: hidden;
+}
