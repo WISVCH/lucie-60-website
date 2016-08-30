@@ -227,6 +227,8 @@ header .header-content .header-content-inner p {
   display: block;
   max-width: 650px;
   margin: 0 auto;
+  max-height:335px;
+  overflow: hidden;
 }
 .portfolio-box .portfolio-box-caption {
   color: white;
