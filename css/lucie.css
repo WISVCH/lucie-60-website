@@ -16,3 +16,14 @@ header {
     /*border: 2px solid;
     border-color: #f39200;*/
 }
+
+.light {
+    color: #FFFFFF;
+}
+
+.img-responsive {
+    width: 576.67px;
+    height: 283.33px;
+
+
+}
