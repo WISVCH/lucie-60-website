@@ -56,3 +56,7 @@ header .header-content .header-content-inner h1 {
 hr {
 	border-color: #F39200;	
 }
+
+#partners img {
+	padding-top: 50px;
+}
