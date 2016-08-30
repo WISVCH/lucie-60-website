@@ -48,3 +48,8 @@ a.light:hover,
 a.light:focus {
 	color: #222;
 }
+
+header .header-content .header-content-inner h1 {
+  margin-top: 25px;
+  font-size: 65px;
+}

@@ -12,7 +12,6 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
-  border-color: #F05F40;
   border-width: 3px;
   max-width: 50px;
 }
@@ -159,7 +158,6 @@ header .header-content .header-content-inner h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 30px;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
