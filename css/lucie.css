@@ -67,3 +67,12 @@ hr {
     margin-top: auto;
     margin-bottom: auto;
 }
+
+#photolist img {
+    max-height: 250px;
+    max-width: 150px;
+}
+
+#photolist li {
+    list-style: none;
+}
