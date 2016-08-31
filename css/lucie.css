@@ -62,3 +62,8 @@ hr {
 #partners img {
 	padding-top: 50px;
 }
+
+.portfolio-box {
+    margin-top: auto;
+    margin-bottom: auto;
+}
