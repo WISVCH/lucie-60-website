@@ -18,6 +18,10 @@ header {
     background-color: #8BD1EF;
 }
 
+#activities .activity:last-child {
+	padding-bottom: 100px;
+}
+
 img.brand {
 	height: 100%;
 }
@@ -63,7 +67,6 @@ hr {
 	padding-top: 50px;
 }
 
-
 .hide-bullets {
     list-style:none;
     margin-left: -40px;
@@ -76,4 +79,7 @@ hr {
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     width: 100%;
+}
+#activities {
+	padding-bottom: 0px;
 }
