@@ -63,27 +63,17 @@ hr {
 	padding-top: 50px;
 }
 
-.portfolio-box {
-    margin-top: auto;
-    margin-bottom: auto;
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
 }
 
-#photolist img {
-    max-height: 120px;
-    max-width: 120px;
+.thumbnail {
+    padding: 0;
 }
 
-#photolist ul {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
-
-#photolist ul li {
-    list-style: none;
-    margin-bottom: 15px;
-}
-
-#photolist ul li img {
-    cursor: pointer; cursor: hand;
-
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
 }
