@@ -69,8 +69,8 @@ hr {
 }
 
 #photolist img {
-    max-height: 250px;
-    max-width: 150px;
+    max-height: 120px;
+    max-width: 120px;
 }
 
 #photolist ul {
@@ -80,7 +80,7 @@ hr {
 
 #photolist ul li {
     list-style: none;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 #photolist ul li img {
