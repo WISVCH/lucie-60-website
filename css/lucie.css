@@ -75,6 +75,20 @@ hr {
 
 .thumbnail {
     padding: 0;
+    max-height: 75px;
+    max-width: 100px;
+    margin-bottom:15px;
+}
+
+.thumbnail-vertical {
+    padding-left: 12.5px;
+    max-height: 75px;
+    max-width: 75px;
+
+}
+
+.item {
+    max-height: 395px;
 }
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
