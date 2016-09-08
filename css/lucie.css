@@ -78,12 +78,14 @@ hr {
     max-height: 75px;
     max-width: 100px;
     margin-bottom:15px;
+    cursor: pointer;
 }
 
 .thumbnail-vertical {
     padding-left: 12.5px;
     max-height: 75px;
     max-width: 75px;
+    cursor: pointer;
 
 }
 
