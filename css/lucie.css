@@ -84,8 +84,9 @@ hr {
 .thumbnail-vertical {
     padding-left: 12.5px;
     max-height: 75px;
-    max-width: 75px;
+    max-width: 100px;
     cursor: pointer;
+    overflow: hidden;
 
 }
 
