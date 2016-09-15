@@ -2,10 +2,15 @@
 
 namespace Mapper;
 
-use BaseModel;
+use Model\BaseModel;
 
 abstract class BaseMapper
 {
+
+    public static function getInstance()
+    {
+        return new static();
+    }
 
     /**
      * Create a new instance of the DomainObject that this

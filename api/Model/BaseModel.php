@@ -9,12 +9,17 @@ namespace Model;
  */
 class BaseModel
 {
-
     protected $id;
 
     public $created_at;
 
     public $updated_at;
+
+    public static function getInstance()
+    {
+        return new static();
+    }
+
 
     /**
      * @return mixed
@@ -72,7 +77,5 @@ class BaseModel
         $this->updated_at = $updated_at;
         return $this;
     }
-
-
 
 }

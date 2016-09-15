@@ -16,6 +16,9 @@ class TicketMapper extends BaseMapper
 
     /**
      * @param $key
+     *
+     * @return \Model\BaseModel
+     * @throws \Exception\TicketNotFoundException
      */
     public function getTicketByKey($key)
     {
@@ -43,16 +46,16 @@ class TicketMapper extends BaseMapper
      */
     public function populate(BaseModel $obj, array $data)
     {
-        if ($obj instanceof TicketModel) {
-            /** @var TicketModel $obj */
-            $obj->setId($data['id'])
-                ->setKey($data['ticket_key'])
-                ->setName($data['name'])
-                ->setDescription($data['description'])
-                ->setAmount($data['amount'])
-                ->setDate($data['date'])
-                ->setAvailable($data['available']);
-        }
+        /** @var TicketModel $obj */
+        $obj->setId($data['id'])
+            ->setKey($data['ticket_key'])
+            ->setName($data['name'])
+            ->setDescription($data['description'])
+            ->setAmount($data['amount'])
+            ->setDate($data['date'])
+            ->setAvailable($data['available'])
+            ->setUpdatedAt($data['updated_at'])
+            ->setCreatedAt($data['created_at']);
         return $obj;
     }
 
@@ -81,7 +84,9 @@ class TicketMapper extends BaseMapper
     /**
      * Insert the DomainObject to persistent storage
      *
-     * @param BaseModel $obj
+     * @param \Model\BaseModel $obj
+     *
+     * @internal param $BaseModel
      */
     protected function _insert(BaseModel $obj)
     {

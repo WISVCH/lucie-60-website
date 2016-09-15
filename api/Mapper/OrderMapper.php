@@ -9,7 +9,9 @@
 namespace Mapper;
 
 
-use BaseModel;
+use Exception\OrderNotFoundException;
+use Model\BaseModel;
+use Model\OrderModel;
 
 class OrderMapper extends BaseMapper
 {
@@ -19,6 +21,24 @@ class OrderMapper extends BaseMapper
      */
     public function __construct()
     {
+    }
+
+    /**
+     * @param $key
+     *
+     * @return \Model\BaseModel
+     * @throws \Exception\OrderNotFoundException
+     */
+    public function getOrderByKey($key) {
+        global $database;
+        $database->where('order_key', $key);
+
+        $result = $database->getOne('orders');
+        if ($result !== null) {
+            return $this->create($result);
+        } else {
+            throw new OrderNotFoundException("Order: " . $key . " not found!");
+        }
     }
 
     /**
@@ -34,27 +54,55 @@ class OrderMapper extends BaseMapper
      */
     public function populate(BaseModel $obj, array $data)
     {
-        // TODO: Implement populate() method.
+        if ($obj instanceof OrderModel) {
+            /** @var OrderModel $obj */
+            $obj->setId($data['id'])
+                ->setOrderKey($data['order_key'])
+                ->setOrderAmount($data['order_amount'])
+                ->setOrderPaid($data['order_paid'])
+                ->setOrderEventId($data['order_event_id'])
+                ->setOrderStatus($data['order_status'])
+                ->setOrderPaymentUrl($data['order_payment_url'])
+                ->setCreatedAt($data['created_at'])
+                ->setUpdatedAt($data['updated_at']);
+        }
+        return $obj;
     }
 
     /**
      * Create a new instance of a DomainObject
      *
-     * @return BaseModel
+     * @return BaseModel|\Model\OrderModel
      */
     protected function _create()
     {
-        // TODO: Implement _create() method.
+        return new OrderModel();
     }
 
     /**
      * Insert the DomainObject to persistent storage
      *
      * @param BaseModel $obj
+     *
+     * @return \Model\BaseModel
      */
     protected function _insert(BaseModel $obj)
     {
-        // TODO: Implement _insert() method.
+        global $database;
+
+        /** @var \MysqliDb $database */
+        $id = $database->insert('orders', [
+            'order_key' => $obj->getOrderKey(),
+            'order_amount' => $obj->getOrderAmount(),
+            'order_paid' => $obj->getOrderPaid(),
+            'order_event_id' => $obj->getOrderEventId(),
+            'order_status' => $obj->getOrderStatus(),
+            'order_payment_url' => $obj->getOrderPaymentUrl(),
+            'created_at' => date("Y-m-d h:i:s"),
+            'updated_at' => date("Y-m-d h:i:s")
+        ]);
+
+        $obj->setId($id);
     }
 
     /**
@@ -64,7 +112,16 @@ class OrderMapper extends BaseMapper
      */
     protected function _update(BaseModel $obj)
     {
-        // TODO: Implement _update() method.
+        global $database;
+        $database->where('id', $obj->getId());
+        $database->update('orders', [
+            'order_key' => $obj->getOrderKey(),
+            'order_amount' => $obj->getOrderAmount(),
+            'order_paid' => $obj->getOrderPaid(),
+            'order_event_id' => $obj->getOrderEventId(),
+            'order_status' => $obj->getOrderStatus(),
+            'order_payment_url' => $obj->getOrderPaymentUrl()
+        ]);
     }
 
     /**

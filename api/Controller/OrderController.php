@@ -11,6 +11,9 @@ namespace Controller;
 
 use Exception;
 use Mapper\OrderMapper;
+use Mapper\TicketSoldMapper;
+use Model\OrderModel;
+use Model\TicketSoldModel;
 use Mollie_API_Exception;
 use Mollie_API_Object_Method;
 
@@ -25,46 +28,73 @@ class OrderController extends BaseController
     public function __construct()
     {
         $this->_mollie = new \Mollie_API_Client();
-        $this->_mollie->setApiKey("test_4c4S5pn4N58rAEncrr3RdQNhVPVyAf");
+        $this->_mollie->setApiKey(MOLLIE_KEY);
 
         $this->_mapper = new OrderMapper();
     }
 
     public function create($data)
     {
-        global $database;
         $ticketController = new TicketController();
 
         $amount = 0.0;
-
-        // Lock database
-        $database->startTransaction();
         foreach ($data as $ticket) {
             $ticket = $ticketController->getByKey($ticket['key']);
-
             $amount += $ticket->getAmount();
-
-            // TODO: insert ticket into database
         };
 
+        $payments = $this->_createMollieOrder($amount);
+        foreach ($data as $item) {
+            $ticket = $ticketController->getByKey($item['key']);
+            $ticketSold = TicketSoldModel::getInstance()
+                ->setOrderKey($payments->id)
+                ->setTicketKey($ticket->getKey())
+                ->setUserName($item['name'])
+                ->setUserEmail($item['email'])
+                ->setUniqueKey(rand(100000, 999999));
+
+            TicketSoldMapper::getInstance()->save($ticketSold);
+        }
+
+        return $this->getURL($payments->id);
+    }
+
+    private function _createMollieOrder($amount) {
         try {
+            // TODO: redirectURL
             $payments = $this->_mollie->payments->create([
                 "method" => Mollie_API_Object_Method::IDEAL,
                 "amount" => $amount,
-                "description" => "Lustrum trending",
+                "description" => "Lustrum #trending",
                 "redirectUrl" => "http://lustrum:8080/hallo.php",
             ]);
 
-            // TODO: insert order into database
-            print_r($payments);
+            $orderMapper = new OrderMapper();
+            $order = OrderModel::getInstance()->setOrderKey($payments->id)
+                ->setOrderAmount($payments->amount)
+                ->setOrderPaymentUrl($this->getURL($payments->id));
+            $orderMapper->save($order);
 
-            return $this->getURL($payments->id);
-        } catch (Exception $e) {
-            $database->rollback();
+            return $payments;
+        } catch (Mollie_API_Exception $e) {
             echo "API call failed: " . htmlspecialchars($e->getMessage());
         }
 
-        $database->commit();
+        return false;
+    }
+
+    public function updatePayment($id) {
+        $payment = $this->_mollie->payments->get($id);
+
+        print_r($payment);
+        $order = OrderMapper::getInstance()->getOrderByKey($id)
+            ->setOrderStatus($payment->status);
+
+        OrderMapper::getInstance()->save($order);
+
+        if ($payment->isPaid()) {
+            // TODO: mail user with codes
+        }
     }
 
     public function getURL($orderId)
