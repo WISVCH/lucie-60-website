@@ -9,7 +9,7 @@ define("DB_HOST", "127.0.0.1");
 define("DB_USERNAME", "root");
 define("DB_PASSWORD", "root");
 define("DB_DATABASE", "ch_lucie_website");
-define("DB_PREFIX", "lucie");
+define("DB_PREFIX", "lucie_");
 
 
 // Mollie

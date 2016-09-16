@@ -86,14 +86,13 @@ class OrderController extends BaseController
     public function updatePayment($id) {
         $payment = $this->_mollie->payments->get($id);
 
-        print_r($payment);
         $order = OrderMapper::getInstance()->getOrderByKey($id)
             ->setOrderStatus($payment->status);
-
         OrderMapper::getInstance()->save($order);
 
+        // Mail user if order is paid
         if ($payment->isPaid()) {
-            // TODO: mail user with codes
+            (new MailController())->mailOrder($payment->id);
         }
     }
 

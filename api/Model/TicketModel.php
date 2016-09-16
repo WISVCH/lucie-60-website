@@ -25,6 +25,8 @@ class TicketModel extends BaseModel
 
     private $available;
 
+    public $background;
+
     /**
      * @return mixed
      */
@@ -158,6 +160,23 @@ class TicketModel extends BaseModel
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getBackground()
+    {
+        return $this->background;
+    }
 
+    /**
+     * @param mixed $background
+     *
+     * @return TicketModel
+     */
+    public function setBackground($background)
+    {
+        $this->background = $background;
+        return $this;
+    }
 
 }

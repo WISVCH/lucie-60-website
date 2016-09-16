@@ -12,4 +12,7 @@ namespace Controller;
 class MailController
 {
 
+    public function mailOrder($order_key) {
+
+    }
 }

@@ -1,4 +1,4 @@
-<?php include_once "components/header.html" ?>
+<?php include_once "pages/components/header.html" ?>
 
     <header>
         <div class="header-content">

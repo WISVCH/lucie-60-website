@@ -54,6 +54,7 @@ class TicketMapper extends BaseMapper
             ->setAmount($data['amount'])
             ->setDate($data['date'])
             ->setAvailable($data['available'])
+            ->setBackground($data['background'])
             ->setUpdatedAt($data['updated_at'])
             ->setCreatedAt($data['created_at']);
         return $obj;

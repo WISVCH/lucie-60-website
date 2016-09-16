@@ -4,8 +4,6 @@ header('Access-Control-Allow-Origin: *');
 
 use Controller\OrderController;
 use Controller\TicketController;
-use Slim\Http\Request;
-use Slim\Http\Response;
 
 // Autoload
 require "../vendor/autoload.php";
@@ -21,7 +19,7 @@ $c = new \Slim\Container($configuration);
 $app = new \Slim\App($c);
 
 $app->group('/order', function () {
-    $this->post('/create', function (Request $request, Response $response, $args) {
+    $this->post('/create', function($request, $response, $args) {
         $order = new OrderController();
 
         $result = $order->create($request->getParsedBody()['data']);
@@ -37,7 +35,7 @@ $app->group('/order', function () {
 
 $app->group('/ticket', function () {
     $this->group('/get', function () {
-        $this->get('/all', function ($request, $response, $argd) {
+        $this->get('/all', function ($request, $response, $args) {
             $tickets = new TicketController();
 
             return $response->withJson($tickets->getAllAvailableTickets());

@@ -1,0 +1,54 @@
+@import "variables.less";
+@import "mixins.less";
+
+.ticket-container {
+  .ticket {
+    margin-bottom: 30px;
+
+    .ticket-images{
+      background: url('http://placekitten.com/150/300');
+      display: block;
+      height: 200px;
+    }
+    .ticket-description {
+      position: relative;
+      //background: #34429c;
+
+      span.date {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        background: @theme-primary;
+        color: @white;
+      }
+
+      h1 {
+        font-size: 24px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid @gray-light
+      }
+
+      p {
+        display: block;
+        height: 72px;
+      }
+
+      span.price {
+        display: block;
+        width: 100%;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+      }
+    }
+  }
+
+  .ticket-button {
+    background: @theme-primary;
+    border-radius: 0;
+    width: 100%;
+    color: @white;
+    padding: 10px 0;
+  }
+}
