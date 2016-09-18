@@ -2,9 +2,11 @@
   margin-bottom: 30px;
 }
 .ticket-container .ticket .ticket-images {
-  background: url('http://placekitten.com/150/300');
   display: block;
   height: 200px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .ticket-container .ticket .ticket-description {
   position: relative;
@@ -38,4 +40,7 @@
   width: 100%;
   color: #FFF;
   padding: 10px 0;
+}
+.basket-table h4 {
+  margin: 0 0 10px 0;
 }
