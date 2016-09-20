@@ -8,16 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHP">
-        <CLASSES>
-          <root url="file:///Applications/MAMP/bin/php/php7.0.10/lib/php" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file:///Applications/MAMP/bin/php/php7.0.10/lib/php" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="lucie-website node_modules" level="project" />
   </component>
 </module>
