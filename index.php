@@ -121,7 +121,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="activity-title">Symposium</h2>
                     <p class="activity-date">1 May</p>
-                    <p class="activity-detail">How is your online data protected? And does this online protection still work in the future? We will try to answer these and more questions about cyber security during our symposium themed: ‘The key to your privacy, the science behind cyber security’. The symposium will take place in Theater de Veste in Delft and will be fully catered.
+                    <p class="activity-detail">How is your online data protected? Does this online protection still work in the future? We will try to answer these and more questions about cyber security during our symposium themed: ‘The key to your privacy, the science behind cyber security’. The symposium will take place in Theater de Veste in Delft and will be fully catered.
                         During the symposium you will be able to attend a series of mathematics and computer science lectures. Subjects that are going to be discussed are for example web tracking, encryption and quantum computing. Furthermore, there will be a discussion between some of our speakers and a live hacking. The symposium will be concluded with drinks and the possibility to network and share thoughts with companies and other attendees.
                         For more information about the symposium and ticket sale you can take a look on the website of the symposium.
                     </p>
