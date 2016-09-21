@@ -85,7 +85,10 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="activity-title">Gala</h2>
                     <p class="activity-date">16 December</p>
-                    <p class="activity-detail">More information coming soon.</p>
+                    <p class="activity-detail">In honor of the 12th lustrum of W.I.S.V. ‘Christiaan Huygens’ the Gala committee will organize a luxurious and chique party to celebrate the 60th anniversary of the association, the Lustrum Gala.
+                        This is the chance for the guys to show their possible dates how much of a gentleman they actually are! However, there’s a twist. This year's Gala will be held in 2016, which changes the traditions of the gala just a slight bit. Normally, men should ask their significant other to the gala, but because 2016 is a leap year, the tables have turned. Yes, ladies, this year all power is in your hands! You can now let the person you are into know what you, maybe, feel for him or her without having to throw all your feelings on the table.
+                        You can get your tickets and extra information on the Gala on our website at http://wisv.ch/gala.
+                    </p>
                 </div>
             </div>
 
@@ -110,7 +113,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="activity-title">Kingsday</h2>
                     <p class="activity-date">27 April</p>
-                    <p class="activity-detail">More information coming soon.</p>
+                    <p class="activity-detail">One of the best Dutch holidays of the year is the birthday of our King. This year he will be celebrating his 50th birthday. We will celebrate this beautiful day with him, in our Trending orange outfits in Utrecht. On our own party boat, we sail through the canals of this beautiful city. Afterwards our party will continue at one of the many party areas in the city. So celebrate this day extra special this year with us in Utrecht! </p>
                 </div>
             </div>
 
@@ -118,7 +121,10 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="activity-title">Symposium</h2>
                     <p class="activity-date">1 May</p>
-                    <p class="activity-detail">More information coming soon.</p>
+                    <p class="activity-detail">How is your online data protected? And does this online protection still work in the future? We will try to answer these and more questions about cyber security during our symposium themed: ‘The key to your privacy, the science behind cyber security’. The symposium will take place in Theater de Veste in Delft and will be fully catered.
+                        During the symposium you will be able to attend a series of mathematics and computer science lectures. Subjects that are going to be discussed are for example web tracking, encryption and quantum computing. Furthermore, there will be a discussion between some of our speakers and a live hacking. The symposium will be concluded with drinks and the possibility to network and share thoughts with companies and other attendees.
+                        For more information about the symposium and ticket sale you can take a look on the website of the symposium.
+                    </p>
                 </div>
             </div>
 
