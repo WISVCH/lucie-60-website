@@ -1,7 +1,7 @@
 <?php include_once "pages/components/header.html" ?>
 
     <header>
-        <div class="header-content">
+        <div class="header-content bg-secondary">
             <div class="header-content-inner">
                 <img src="img/logo.svg">    
                 
@@ -280,4 +280,4 @@
         </div>
     </section>
 
-<?php include_once "components/footer.html" ?>
+<?php include_once "pages/components/footer.html" ?>
