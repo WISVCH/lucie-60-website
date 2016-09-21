@@ -1,7 +1,0 @@
-{
-    "require": {
-        "mollie/mollie-api-php": "^1.6",
-        "slim/slim": "^3.0",
-        "joshcam/mysqli-database-class": "^2.6"
-    }
-}
