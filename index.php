@@ -241,9 +241,19 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <i class="fa fa-5x fa-heart wow bounceIn bg-secondary"></i>
+                            <i class="fa fa-5x fa-birthday-cake wow bounceIn bg-secondary"></i>
                             <div class="card-block">
                                 <h3 class="card-title">Tom Harting</h3>
+                                <p class="card-text">Event Affairs</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+
+                        </div>
+                        <div class="col-lg-4">
+                            <i class="fa fa-5x fa-heart wow bounceIn bg-secondary"></i>
+                            <div class="card-block">
+                                <h3 class="card-title">Marjolein Bouwmeester</h3>
                                 <p class="card-text">Qualitate Qua</p>
                             </div>
                         </div>
