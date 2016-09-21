@@ -14,7 +14,7 @@ $(document).ready(function () {
         " &lt;%email%&gt;</span></td><td>%amount%</td></tr>";
 
     //
-    updateBasket()
+    updateBasket();
 
     $.ajax("https://lustrum.ch/api/ticket/get/all").always(function (e, r) {
         $.each(e, function (k, v) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
                 month: "2-digit",
                 year: "numeric"
             });
-            v.amount = "&euro;" + v.amount.toFixed(2).replace(".", ",");
+            v.amount = "&euro; " + v.amount.toFixed(2).replace(".", ",");
             $.each(v, function (key, value) {
                 ticket = ticket.split("%" + key + "%").join(value);
             });
@@ -43,6 +43,7 @@ $(document).ready(function () {
         model.find("#ticketKey").val(key);
         model.find("#ticketName").val(name);
         model.find("#ticketAmount").val(amount);
+        model.find("#modalLabel").html(name);
     });
 
     $('#addTicketToBasket').click(function() {
@@ -109,6 +110,14 @@ $(document).ready(function () {
             });
             basket.append(ticket);
         });
+
+        // Transactie cost
+        if (0 != sum) {
+            sum += 0.29;
+            basket.append("<tr><td>#</td><td><h4>Transaction fee</h4></td><td>&euro; 0,29</td></tr>");
+        } else {
+            basket.append("<tr><td colspan='4'>Basket is empty</td>")
+        }
 
         // Total
         $('#tableTotal').html(sum.toFixed(2).replace(".", ","));

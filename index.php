@@ -3,7 +3,7 @@
     <header>
         <div class="header-content bg-secondary">
             <div class="header-content-inner">
-                <img src="img/logo.svg">    
+                <img src="img/logo.svg">
                 
                 <h1>12th Lustrum</h1>
                 <p>W.I.S.V. 'Christiaan Huygens'</p>    

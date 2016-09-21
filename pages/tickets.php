@@ -73,7 +73,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Description</th>
-                                <th>Price</th>
+                                <th style="width: 100px;">Price</th>
                             </tr>
                             </thead>
                             <tfoot>
