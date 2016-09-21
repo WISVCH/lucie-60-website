@@ -1,0 +1,46 @@
+.ticket-container .ticket {
+  margin-bottom: 30px;
+}
+.ticket-container .ticket .ticket-images {
+  display: block;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.ticket-container .ticket .ticket-description {
+  position: relative;
+}
+.ticket-container .ticket .ticket-description span.date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #F39200;
+  color: #FFF;
+}
+.ticket-container .ticket .ticket-description h1 {
+  font-size: 24px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #777777;
+}
+.ticket-container .ticket .ticket-description p {
+  display: block;
+  height: 72px;
+}
+.ticket-container .ticket .ticket-description span.price {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+}
+.ticket-container .ticket-button {
+  background: #F39200;
+  border-radius: 0;
+  width: 100%;
+  color: #FFF;
+  padding: 10px 0;
+}
+.basket-table h4 {
+  margin: 0 0 10px 0;
+}
