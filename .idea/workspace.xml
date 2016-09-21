@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6635af6-2716-4620-a3e3-4cebedbf83a8" name="Default" comment="" />
+    <list default="true" id="f6635af6-2716-4620-a3e3-4cebedbf83a8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Controller/MailController.php" afterPath="$PROJECT_DIR$/api/Controller/MailController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Controller/OrderController.php" afterPath="$PROJECT_DIR$/api/Controller/OrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Mapper/TicketMapper.php" afterPath="$PROJECT_DIR$/api/Mapper/TicketMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php" afterPath="$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Model/TicketSoldModel.php" afterPath="$PROJECT_DIR$/api/Model/TicketSoldModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/index.php" afterPath="$PROJECT_DIR$/api/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ticket.js" afterPath="$PROJECT_DIR$/js/ticket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/tickets.php" afterPath="$PROJECT_DIR$/pages/tickets.php" />
+    </list>
     <ignored path="lucie-website.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -28,6 +39,159 @@
     <favorites_list name="lucie-website" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.5153707">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="variables.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/less/variables.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ticket.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/ticket.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="326">
+                  <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="false" />
+                    <marker date="1474466431000" expanded="true" signature="428:432" ph="&lt;" />
+                    <marker date="1474466431000" expanded="true" signature="439:443" ph="&gt;" />
+                    <marker date="1474466431000" expanded="true" signature="3905:3911" ph="€" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tickets.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/tickets.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1125">
+                  <caret line="75" column="63" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+                  <folding>
+                    <element signature="e#3520#3541#0#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="creative.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/less/creative.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="TicketMapper.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/Mapper/TicketMapper.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#26#63#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ticket.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/less/ticket.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="722">
+                  <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/index.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="557">
+                  <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/api/Controller/OrderController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="343">
+                  <caret line="70" column="15" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MailController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/Controller/MailController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TicketSoldMapper.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#108#145#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TicketSoldModel.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/Model/TicketSoldModel.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderMapper.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/Mapper/OrderMapper.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1890">
+                  <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="OrderModel.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/api/Model/OrderModel.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
@@ -70,6 +234,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,14 +256,15 @@
         <option value="$PROJECT_DIR$/api/Model/OrderModel.php" />
         <option value="$PROJECT_DIR$/vendor/joshcam/mysqli-database-class/MysqliDb.php" />
         <option value="$PROJECT_DIR$/api/Mapper/BaseMapper.php" />
-        <option value="$PROJECT_DIR$/api/Model/TicketSoldModel.php" />
-        <option value="$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php" />
         <option value="$PROJECT_DIR$/api/Exception/TicketNotFoundException.php" />
         <option value="$PROJECT_DIR$/api/Exception/OrderNotFoundException.php" />
         <option value="$PROJECT_DIR$/api/Mapper/OrderMapper.php" />
         <option value="$PROJECT_DIR$/api/webhook.php" />
+<<<<<<< HEAD
+=======
         <option value="$PROJECT_DIR$/api/Controller/OrderController.php" />
         <option value="$PROJECT_DIR$/api/Controller/MailController.php" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
         <option value="$PROJECT_DIR$/css/lucie.css" />
         <option value="$PROJECT_DIR$/less/variables.less" />
         <option value="$PROJECT_DIR$/pages/components/footer.html" />
@@ -106,13 +272,21 @@
         <option value="$PROJECT_DIR$/api/config.php" />
         <option value="$PROJECT_DIR$/pages/components/header.html" />
         <option value="$PROJECT_DIR$/api/Model/TicketModel.php" />
-        <option value="$PROJECT_DIR$/api/Mapper/TicketMapper.php" />
-        <option value="$PROJECT_DIR$/api/index.php" />
         <option value="$PROJECT_DIR$/less/ticket.less" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pages/tickets.php" />
         <option value="$PROJECT_DIR$/js/ticket.js" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/api/index.php" />
+        <option value="$PROJECT_DIR$/api/Mapper/TicketMapper.php" />
+        <option value="$PROJECT_DIR$/api/Model/TicketSoldModel.php" />
+        <option value="$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php" />
+        <option value="$PROJECT_DIR$/api/Controller/OrderController.php" />
+        <option value="$PROJECT_DIR$/api/Controller/MailController.php" />
+=======
         <option value="C:/Program Files (x86)/XAMPP/php/php.ini" />
         <option value="$PROJECT_DIR$/index.php" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
       </list>
     </option>
   </component>
@@ -139,10 +313,17 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="-115" />
+    <option name="y" value="-1080" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+=======
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1048" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -206,20 +387,80 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lucie-website">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mapper" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lucie-website" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exception" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,6 +542,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,7 +555,7 @@
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
-    <property name="SearchEverywhereHistoryKey" value="ticket&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/api/Model/TicketModel.php&#10;header&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/pages/components/header.html&#10;tick&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/pages/tickets.php&#10;footer.html&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/pages/components/footer.html" />
+    <property name="SearchEverywhereHistoryKey" value="model&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/api/Model/TicketSoldModel.php&#10;index&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/api/index.php&#10;inde&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/index.php&#10;order&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/api/Controller/OrderController.php&#10;ticket&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/api/Model/TicketModel.php&#10;header&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/pages/components/header.html&#10;tick&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/pages/tickets.php&#10;footer.html&#9;FILE&#9;file:///Users/sven/Google Drive/Development/CH/lucie-website/pages/components/footer.html" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
@@ -433,12 +675,39 @@
       <workItem from="1474119071740" duration="396000" />
       <workItem from="1474190835234" duration="80000" />
       <workItem from="1474225822344" duration="4309000" />
+<<<<<<< HEAD
+      <workItem from="1474238717385" duration="3377000" />
+      <workItem from="1474274285450" duration="99000" />
+      <workItem from="1474282920312" duration="13000" />
+      <workItem from="1474465472275" duration="3992000" />
+=======
       <workItem from="1474238717385" duration="3080000" />
       <workItem from="1474377626156" duration="4073000" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="42172000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-115" y="-1080" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.504884" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17425743" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+=======
     <option name="totallyTimeSpent" value="41844000" />
   </component>
   <component name="ToolWindowManager">
@@ -448,12 +717,17 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.504884" order="0" side_tool="true" content_ui="tabs" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489796" sideWeight="0.495116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13897763" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+=======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885417" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -503,13 +777,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/api/Mapper/TicketMapper.php</url>
-          <line>24</line>
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -526,7 +794,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
+            <element signature="e#26#63#0#PHP" expanded="true" />
+=======
             <element signature="e#25#63#0#PHP" expanded="false" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
           </folding>
         </state>
       </provider>
@@ -642,11 +914,25 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/vendor/mollie/mollie-api-php/src/Mollie/API/Resource/Payments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Mapper/BaseMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+=======
     <entry file="file://$PROJECT_DIR$/vendor/mollie/mollie-api-php/src/Mollie/API/Resource/Payments.php" />
     <entry file="file://$PROJECT_DIR$/api/Controller/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1215">
           <caret line="92" column="37" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
         </state>
       </provider>
     </entry>
@@ -671,20 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/Mapper/OrderMapper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/Exception/OrderNotFoundException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -692,6 +964,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/api/Controller/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -699,6 +973,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
     <entry file="file://$PROJECT_DIR$/css/lucie.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
@@ -735,17 +1010,20 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/pages/components/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
     <entry file="file://$PROJECT_DIR$/js/lucie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -756,6 +1034,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/api/Mapper/TicketMapper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1232">
@@ -782,6 +1062,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
     <entry file="file://$PROJECT_DIR$/api/Model/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="911">
@@ -807,6 +1088,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/creative.less">
+<<<<<<< HEAD
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="22" />
@@ -815,6 +1098,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/Mapper/BaseMapper.php">
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
@@ -830,6 +1114,22 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/api/Mapper/OrderMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tickets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="63" selection-start-line="75" selection-start-column="63" selection-end-line="75" selection-end-column="63" />
+          <folding>
+            <element signature="e#3520#3541#0#HTML" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/js/ticket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -838,12 +1138,23 @@
             <element signature="e#0#41#0" expanded="false" />
             <marker date="1474377397133" expanded="true" signature="428:432" ph="&lt;" />
             <marker date="1474377397133" expanded="true" signature="439:443" ph="&gt;" />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/tickets.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="326">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+            <marker date="1474466431000" expanded="true" signature="428:432" ph="&lt;" />
+            <marker date="1474466431000" expanded="true" signature="439:443" ph="&gt;" />
+            <marker date="1474466431000" expanded="true" signature="3905:3911" ph="€" />
+          </folding>
+=======
         <state relative-caret-position="22">
           <caret line="80" column="41" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
           <folding />
@@ -878,6 +1189,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="709" column="13" selection-start-line="709" selection-start-column="13" selection-end-line="709" selection-end-column="50" />
+          <folding />
+>>>>>>> 489b8a8d0451caad09a4d70758beb8901440c304
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/ticket.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Mapper/TicketMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="e#26#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Mapper/TicketSoldMapper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding>
+            <element signature="e#108#145#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="1018" column="9" selection-start-line="1018" selection-start-column="9" selection-end-line="1018" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Model/TicketSoldModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Controller/MailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/Controller/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="70" column="15" selection-start-line="70" selection-start-column="15" selection-end-line="70" selection-end-column="15" />
           <folding />
         </state>
       </provider>

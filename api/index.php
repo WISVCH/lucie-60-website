@@ -4,6 +4,8 @@ header('Access-Control-Allow-Origin: *');
 
 use Controller\OrderController;
 use Controller\TicketController;
+use Slim\App;
+use Slim\Container;
 
 // Autoload
 require "../vendor/autoload.php";
@@ -15,8 +17,8 @@ $configuration = [
         'displayErrorDetails' => true,
     ],
 ];
-$c = new \Slim\Container($configuration);
-$app = new \Slim\App($c);
+$c = new Container($configuration);
+$app = new App($c);
 
 $app->group('/order', function () {
     $this->post('/create', function($request, $response, $args) {

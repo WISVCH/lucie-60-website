@@ -14,6 +14,7 @@ class TicketSoldModel extends BaseModel
 
     public $order_key;
     public $ticket_key;
+    public $ticket = null;
     public $user_name;
     public $user_email;
     public $unique_key = null;
@@ -34,6 +35,25 @@ class TicketSoldModel extends BaseModel
     public function setOrderKey($order_key)
     {
         $this->order_key = $order_key;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTicket()
+    {
+        return $this->ticket;
+    }
+
+    /**
+     * @param mixed $ticket
+     *
+     * @return TicketSoldModel
+     */
+    public function setTicket($ticket)
+    {
+        $this->ticket = $ticket;
         return $this;
     }
 

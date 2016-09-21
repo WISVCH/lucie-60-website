@@ -1,6 +1,8 @@
 <?php
 
 namespace Mapper;
+
+use Exception\OrderNotFoundException;
 use Exception\TicketNotFoundException;
 use Model\BaseModel;
 use Model\TicketModel;
@@ -40,7 +42,7 @@ class TicketMapper extends BaseMapper
      * To be implemented by the concrete mapper class
      *
      * @param BaseModel|TicketModel $obj
-     * @param array     $data
+     * @param array                 $data
      *
      * @return BaseModel
      */
@@ -65,7 +67,7 @@ class TicketMapper extends BaseMapper
         global $database;
 
         $return = [];
-        foreach($database->get('tickets') as $tickets) {
+        foreach ($database->get('tickets') as $tickets) {
             $return[] = $this->create($tickets);
         }
 
