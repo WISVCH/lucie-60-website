@@ -171,11 +171,12 @@
     </section>
 
     <section class="no-padding" id="pictures" class = "bg-secondary">
-        <div class="container-fluid">
+        <div class="container-fluid picturebox">
             <div class="row no-gutter">
 
                 <div class="col-lg-4 col-sm-6">
-                    <a href="cantusphotos.html" class="portfolio-box">
+
+                    <a href="cantusphotos.php" class="portfolio-box">
                         <img src="img/photos/P1100571.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
@@ -186,36 +187,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#pictures" class="portfolio-box">
-                        <img src="img/photos/uilplaceholder.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Coming Soon!
-                                </div>
-                                <div class="project-name">
-                                    Lustrum Week 1
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#pictures" class="portfolio-box">
-                        <img src="img/photos/uilplaceholder.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Coming Soon!
-                                </div>
-                                <div class="project-name">
-                                    Hitchhiking Competition
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
+
             </div>
         </div>
     </section>

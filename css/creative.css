@@ -222,7 +222,10 @@ header .header-content .header-content-inner p {
   position: relative;
   display: block;
   max-width: 650px;
+  max-height:475px;
+  overflow:hidden;
   margin: 0 auto;
+
 }
 .portfolio-box .portfolio-box-caption {
   color: white;
