@@ -9,10 +9,15 @@
 namespace Controller;
 
 
+use Mapper\TicketSoldMapper;
+
 class MailController
 {
 
-    public function mailOrder($order_key) {
+    public function mailOrder($payment) {
+        $tickets = TicketSoldMapper::getInstance()->getTicketsByOrderKey($payment);
 
+        $message = "hallo";
+        mail($tickets[0]->getUserEmail(), "Lustrum #trending - tickets", $message);
     }
 }

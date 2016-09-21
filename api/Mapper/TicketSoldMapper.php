@@ -9,11 +9,34 @@
 namespace Mapper;
 
 
+use Exception\OrderNotFoundException;
 use Model\BaseModel;
 use Model\TicketSoldModel;
 
 class TicketSoldMapper extends BaseMapper
 {
+
+    public function getTicketsByOrderKey($key)
+    {
+        global $database;
+        $database->where('order_key', $key);
+
+        $result = $database->get("tickets_sold");
+        if ($result !== null) {
+            $tickets = [];
+            foreach ($result as $row) {
+                $model = $this->create($row);
+                $model->setTicket(
+                    TicketMapper::getInstance()->getTicketByKey($model->getTicketKey())
+                );
+                $tickets[] = $model;
+            }
+
+            return $tickets;
+        } else {
+            throw new OrderNotFoundException("Ticket from order " . $key . " not found!");
+        }
+    }
 
     /**
      * Populate the DomainObject with the values
@@ -36,6 +59,8 @@ class TicketSoldMapper extends BaseMapper
             ->setUniqueKey($data['unique_key'])
             ->setCreatedAt($data['created_at'])
             ->setUpdatedAt($data['updated_at']);
+
+        return $obj;
     }
 
     /**
