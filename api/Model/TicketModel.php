@@ -21,7 +21,28 @@ class TicketModel extends BaseModel
 
     public $date;
 
-    private $max_sold;
+    public $sold;
+
+    /**
+     * @return mixed
+     */
+    public function getSold()
+    {
+        return $this->sold;
+    }
+
+    /**
+     * @param mixed $sold
+     *
+     * @return TicketModel
+     */
+    public function setSold($sold)
+    {
+        $this->sold = $sold;
+        return $this;
+    }
+
+    public $max_sold;
 
     private $available;
 
