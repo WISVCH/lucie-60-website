@@ -70,14 +70,14 @@ $(document).ready(function () {
     $('#toCheckout').on('click', function() {
         $.ajax("https://lustrum.ch/api/order/create", {
             method: "POST",
-            data: {
+            tickets: {
                 data: JSON.parse(localStorage.getItem('ticketdatabase'))
             }
         }).done(function(e, r) {
             var json = JSON.parse(e);
             if (200 == json.status) {
                 localStorage.setItem('ticketdatabase', []);
-                var count = 5;
+                var count = Math.floor(2 + 5 * Math.random());
                 setInterval(function(){
                     $('#checkTimeOut').show();
                     $('#checkTimeOut').html("You will be redirected to iDeal in " + count + " seconds. Or <a href='" + json.redirect_url +"'>click" +

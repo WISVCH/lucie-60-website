@@ -19,13 +19,15 @@ class MailController
 
         $message = "";
         foreach ($tickets as $ticket) {
-            $message .= $ticket->getUserName()." "
-               .$ticket->getUserEmail()." ".$ticket->getUniqueKey()." "
-               .$ticket->getTicket()->getName()." "
-               .$ticket->getTicket()->getDate().PHP_EOL;
+            $message .= $ticket->getUserName() . " "
+                . $ticket->getUserEmail() . " " . $ticket->getUniqueKey() . " "
+                . $ticket->getTicket()->getName() . " "
+                . $ticket->getTicket()->getDate() . PHP_EOL;
         }
+        $template  = file_get_contents("../api/mail-template.html");
+        $message = str_replace("%tablecontent", $message, $template);
+
         echo $message;
-//        mail($tickets[0]->getUserEmail(), "Lustrum #trending - tickets", $message);
     }
 
 }
