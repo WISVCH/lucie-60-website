@@ -2,7 +2,6 @@
 
 namespace Mapper;
 
-use Exception\OrderNotFoundException;
 use Exception\TicketNotFoundException;
 use Model\BaseModel;
 use Model\TicketModel;
@@ -19,7 +18,7 @@ class TicketMapper extends BaseMapper
     /**
      * @param $key
      *
-     * @return \Model\BaseModel
+     * @return \Model\BaseModel|TicketModel
      * @throws \Exception\TicketNotFoundException
      */
     public function getTicketByKey($key)
@@ -56,15 +55,26 @@ class TicketMapper extends BaseMapper
             ->setAmount($data['amount'])
             ->setDate($data['date'])
             ->setAvailable($data['available'])
+            ->setMaxSold($data['max_sold'])
             ->setBackground($data['background'])
             ->setUpdatedAt($data['updated_at'])
-            ->setCreatedAt($data['created_at']);
+            ->setCreatedAt($data['created_at'])
+            ->setSold(
+                count(TicketSoldMapper::getInstance()->getTicketsByTicketKey($obj->getKey()))
+            );
+
+        if ($obj->getSold() >= $obj->getMaxSold() - 1) {
+            $obj->setAvailable(0);
+            $this->save($obj);
+        }
+        
         return $obj;
     }
 
     public function getTickets()
     {
         global $database;
+        $database->where('available', 1);
 
         $return = [];
         foreach ($database->get('tickets') as $tickets) {
@@ -103,7 +113,11 @@ class TicketMapper extends BaseMapper
      */
     protected function _update(BaseModel $obj)
     {
-        // TODO: Implement _update() method.
+        global $database;
+        $database->where('id', $obj->getId());
+        $database->update('tickets', [
+            'available' => $obj->getAvailable()
+        ]);
     }
 
     /**

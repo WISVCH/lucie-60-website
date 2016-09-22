@@ -38,6 +38,24 @@ class TicketSoldMapper extends BaseMapper
         }
     }
 
+    public function getTicketsByTicketKey($key)
+    {
+        global $database;
+        $database->where('ticket_key', $key);
+
+        $result = $database->get("tickets_sold");
+        if ($result !== null) {
+            $tickets = [];
+            foreach ($result as $row) {
+                $tickets[] = $this->create($row);
+            }
+
+            return $tickets;
+        } else {
+            throw new OrderNotFoundException("Ticket from order " . $key . " not found!");
+        }
+    }
+
     /**
      * Populate the DomainObject with the values
      * from the data array.

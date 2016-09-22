@@ -5,11 +5,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', true);
 
 //Database
-define("DB_HOST", "127.0.0.1");
-define("DB_USERNAME", "root");
-define("DB_PASSWORD", "root");
-define("DB_DATABASE", "ch_lucie_website");
-define("DB_PREFIX", "lucie_");
+define("DB_HOST", "host");
+define("DB_USERNAME", "username");
+define("DB_PASSWORD", "password");
+define("DB_DATABASE", "database");
+define("DB_PREFIX", "prefix_");
 
 
 // Mollie

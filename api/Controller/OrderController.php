@@ -40,6 +40,10 @@ class OrderController extends BaseController
         $amount = 0.0;
         foreach ($data as $ticket) {
             $ticket = $ticketController->getByKey($ticket['key']);
+
+            if ($ticket->getAvailable() || $ticket->getSold() === $ticket->getMaxSold()) {
+                throw new Exception\AllTicketsSoldException("");
+            }
             $amount += $ticket->getAmount();
         };
         $amount += 0.29;
