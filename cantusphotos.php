@@ -1,4 +1,4 @@
-<?php include_once "components/header.html" ?>
+<?php include_once "pages/components/header.html" ?>
 
 <section class="bg-secondary" id="photolist">
     <div class="container">
@@ -122,4 +122,4 @@
 </section>
 
 
-<?php include_once "components/footer.html" ?>
+<?php include_once "pages/components/footer.html" ?>
