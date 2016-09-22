@@ -110,3 +110,7 @@ hr {
     background-color: #222222;
 }
 
+
+.ticket-container button {
+    margin-bottom: 15px;
+}
