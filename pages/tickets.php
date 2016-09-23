@@ -120,8 +120,4 @@
         </div>
     </div>
 
-    <div id="blueprintTableRow" style="display: none;">
-
-    </div>
-
 <?php include_once "components/footer.html" ?>

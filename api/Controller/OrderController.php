@@ -72,7 +72,7 @@ class OrderController extends BaseController
                 "method" => Mollie_API_Object_Method::IDEAL,
                 "amount" => $amount,
                 "description" => "Lustrum #trending",
-                "redirectUrl" => "http://lustrum:8080/hallo.php",
+                "redirectUrl" => "http://lustrum.ch/pages/payment_complete.php",
             ]);
 
             $orderMapper = new OrderMapper();
