@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     $('#toCheckout').on('click', function() {
         var timeOut = $('#checkTimeOut');
-        // console.log(tickets == []);
+
         if (null == tickets || 0 == tickets.length) {
             timeOut.show();
             timeOut.addClass('alert-warning');
@@ -118,11 +118,13 @@ $(document).ready(function () {
 
         // Basket
         var basket = $("#basketBody");
-        var sum = 0;
+        var sum = 0.0;
         basket.html("");
         $.each(tickets, function(k, v) {
             var ticket = tableRow;
-            sum += parseInt(v.amount.split("€")[1]);
+            console.log(v.amount.replace(",", ".").split("€")[1]);
+            sum += parseFloat(v.amount.replace(",", ".").split("€")[1]);
+            console.log(sum);
             v.ticketNumber = k + 1;
             $.each(v, function (key, value) {
                 ticket = ticket.split("%" + key + "%").join(value);
