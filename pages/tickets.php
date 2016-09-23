@@ -74,13 +74,14 @@
                                 <th>#</th>
                                 <th>Description</th>
                                 <th style="width: 100px;">Price</th>
+                                <th></th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
                                 <th></th>
                                 <th style="text-align: right;">Total</th>
-                                <th>&euro; <span id="tableTotal"></span></th>
+                                <th colspan="2">&euro; <span id="tableTotal"></span></th>
                             </tr>
                             </tfoot>
                             <tbody id="basketBody" class="basket-table"></tbody>
@@ -105,7 +106,11 @@
                 <h1>%name%</h1>
                 <div class="content">
                     <p>%description%</p>
-                    <span class="price">%amount%</span>
+
+                    <div>
+                        <span class="sold">%sold%/%max_sold% tickets sold</span>
+                        <span class="price">%amount%</span>
+                    </div>
                 </div>
             </div>
             <a href="#" data-toggle="modal" data-target="#ticketModal" class="btn btn-default ticket-button"

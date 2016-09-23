@@ -11,7 +11,9 @@ $(document).ready(function () {
     var blueprint = $('#blueprint').html();
     $("#blueprint").remove();
     var tableRow = "<tr><td>%ticketNumber%</td><td><h4>%ticketName%</h4><span>%name%" +
-        " &lt;%email%&gt;</span></td><td>%amount%</td></tr>";
+        " &lt;%email%&gt;</span></td><td>%amount%</td><td><a class='removeTicket' data-key='%ticketNumber%'><i" +
+        " class='fa" +
+        " fa-remove fa-fd'></i></a></td></tr>";
 
     //
     updateBasket();
@@ -67,11 +69,24 @@ $(document).ready(function () {
         updateBasket();
     });
 
+    $('#basketBody').on('click', '.removeTicket', function(event) {
+        var button = $(event.currentTarget);
+        removeTicket(button.data('key'));
+    });
+
     $('#toCheckout').on('click', function() {
+        var timeOut = $('#checkTimeOut');
+        // console.log(tickets == []);
+        if (null == tickets || 0 == tickets.length) {
+            timeOut.show();
+            timeOut.addClass('alert-warning');
+            timeOut.html("Not possible to checkout, basket is empty!");
+            return false;
+        }
         $.ajax("https://lustrum.ch/api/order/create", {
             method: "POST",
-            tickets: {
-                data: JSON.parse(localStorage.getItem('ticketdatabase'))
+            data: {
+                tickets: JSON.parse(localStorage.getItem('ticketdatabase'))
             }
         }).done(function(e, r) {
             var json = JSON.parse(e);
@@ -79,16 +94,20 @@ $(document).ready(function () {
                 localStorage.setItem('ticketdatabase', []);
                 var count = Math.floor(2 + 5 * Math.random());
                 setInterval(function(){
-                    $('#checkTimeOut').show();
-                    $('#checkTimeOut').html("You will be redirected to iDeal in " + count + " seconds. Or <a href='" + json.redirect_url +"'>click" +
+                    timeOut.show();
+                    timeOut.html("You will be redirected to iDeal in " + count + " seconds. Or <a href='" + json.redirect_url +"'>click" +
                         " here</a> if nothing happens.");
                     count--;
 
                     if (count < 0) {
-                        $('#checkTimeOut').hide();
+                        timeOut.hide();
                         window.location.replace(json.redirect_url);
                     }
                 },1000);
+            } else {
+                timeOut.show();
+                timeOut.addClass('alert-danger');
+                timeOut.html(json.message);
             }
         });
     });
@@ -114,12 +133,27 @@ $(document).ready(function () {
         // Transactie cost
         if (0 != sum) {
             sum += 0.29;
-            basket.append("<tr><td>#</td><td><h4>Transaction fee</h4></td><td>&euro; 0,29</td></tr>");
+            basket.append("<tr><td>#</td><td><h4>Transaction fee</h4></td><td>&euro; 0,29</td><td></td></tr>");
         } else {
             basket.append("<tr><td colspan='4'>Basket is empty</td>")
         }
 
         // Total
         $('#tableTotal').html(sum.toFixed(2).replace(".", ","));
+    }
+
+    function removeTicket(ticketKey) {
+        var new_tickets = [];
+        $.each(tickets, function(k, v) {
+            console.log(k);
+            console.log(ticketKey);
+            if (ticketKey - 1 != k) {
+                new_tickets.push(v);
+            }
+        });
+
+        tickets = new_tickets;
+        localStorage.setItem('ticketdatabase', JSON.stringify(new_tickets));
+        updateBasket();
     }
 });

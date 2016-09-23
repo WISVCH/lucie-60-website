@@ -28,11 +28,16 @@
   height: 72px;
 }
 .ticket-container .ticket .ticket-description span.price {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  float: right;
   font-size: 24px;
   font-weight: bold;
   text-align: right;
+}
+.ticket-container .ticket .ticket-description span.sold {
+  display: inline-block;
+  color: #ccc;
+  float: left;
 }
 .ticket-container .ticket-button {
   background: #F39200;

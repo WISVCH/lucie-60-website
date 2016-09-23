@@ -60,10 +60,10 @@ class TicketMapper extends BaseMapper
             ->setUpdatedAt($data['updated_at'])
             ->setCreatedAt($data['created_at'])
             ->setSold(
-                count(TicketSoldMapper::getInstance()->getTicketsByTicketKey($obj->getKey()))
+                TicketSoldMapper::getInstance()->getTicketsSoldByTicketKey($obj->getKey())
             );
 
-        if ($obj->getSold() >= $obj->getMaxSold() - 1) {
+        if ($obj->getSold() >= $obj->getMaxSold()) {
             $obj->setAvailable(0);
             $this->save($obj);
         }
@@ -75,6 +75,7 @@ class TicketMapper extends BaseMapper
     {
         global $database;
         $database->where('available', 1);
+        $database->orderBy('date', 'ASC');
 
         $return = [];
         foreach ($database->get('tickets') as $tickets) {

@@ -41,8 +41,8 @@ class OrderController extends BaseController
         foreach ($data as $ticket) {
             $ticket = $ticketController->getByKey($ticket['key']);
 
-            if ($ticket->getAvailable() || $ticket->getSold() === $ticket->getMaxSold()) {
-                throw new Exception\AllTicketsSoldException("");
+            if (!$ticket->getAvailable() || $ticket->getSold() === $ticket->getMaxSold()) {
+                throw new Exception\AllTicketsSoldException("Not enough tickets left for " . $ticket->getName());
             }
             $amount += $ticket->getAmount();
         };
@@ -64,7 +64,8 @@ class OrderController extends BaseController
         return $this->getURL($payments->id);
     }
 
-    private function _createMollieOrder($amount) {
+    private function _createMollieOrder($amount)
+    {
         try {
             // TODO: redirectURL
             $payments = $this->_mollie->payments->create([
@@ -88,7 +89,14 @@ class OrderController extends BaseController
         return false;
     }
 
-    public function updatePayment($id) {
+    public function getURL($orderId)
+    {
+        $order = $this->_mollie->payments->get($orderId);
+        return $order->getPaymentUrl();
+    }
+
+    public function updatePayment($id)
+    {
         $payment = $this->_mollie->payments->get($id);
 
         $order = OrderMapper::getInstance()->getOrderByKey($id)
@@ -99,12 +107,6 @@ class OrderController extends BaseController
         if ($payment->isPaid()) {
             (new MailController())->mailOrder($payment->id);
         }
-    }
-
-    public function getURL($orderId)
-    {
-        $order = $this->_mollie->payments->get($orderId);
-        return $order->getPaymentUrl();
     }
 
 }

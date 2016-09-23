@@ -41,9 +41,11 @@ class TicketSoldMapper extends BaseMapper
     public function getTicketsByTicketKey($key)
     {
         global $database;
+        $database->join("orders o", "t.order_key=o.order_key", "LEFT");
         $database->where('ticket_key', $key);
+        $database->where('order_status', 'paid');
 
-        $result = $database->get("tickets_sold");
+        $result = $database->get("tickets_sold t");
         if ($result !== null) {
             $tickets = [];
             foreach ($result as $row) {
@@ -54,6 +56,16 @@ class TicketSoldMapper extends BaseMapper
         } else {
             throw new OrderNotFoundException("Ticket from order " . $key . " not found!");
         }
+    }
+
+    public function getTicketsSoldByTicketKey($key)
+    {
+        global $database;
+        $database->join("orders o", "t.order_key=o.order_key", "LEFT");
+        $database->where('ticket_key', $key);
+        $database->where('order_status', 'paid');
+
+        return $database->getValue("tickets_sold t", "count(*)");
     }
 
     /**

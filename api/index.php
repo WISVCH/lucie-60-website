@@ -24,12 +24,19 @@ $app->group('/order', function () {
     $this->post('/create', function($request, $response, $args) {
         $order = new OrderController();
 
-        $result = $order->create($request->getParsedBody()['tickets']);
-        $response->withJson([
-                "status" => 200,
-                "message" => "Order succesfull",
-                "redirect_url" => $result]
-        );
+        try {
+            $result = $order->create($request->getParsedBody()['tickets']);
+            $response->withJson([
+                    "status" => 200,
+                    "message" => "Order succesfull",
+                    "redirect_url" => $result
+                ]);
+        } catch (Exception $e) {
+            $response->withJson([
+                    "status" => $e->getCode(),
+                    "message" => $e->getMessage()
+                ]);
+        }
 
         return $response;
     });

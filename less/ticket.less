@@ -14,7 +14,6 @@
     }
     .ticket-description {
       position: relative;
-      //background: #34429c;
 
       span.date {
         position: absolute;
@@ -37,11 +36,16 @@
       }
 
       span.price {
-        display: block;
-        width: 100%;
+        display: inline-block;
+        float: right;
         font-size: 24px;
         font-weight: bold;
         text-align: right;
+      }
+      span.sold {
+        display: inline-block;
+        color: #ccc;
+        float: left;
       }
     }
   }
