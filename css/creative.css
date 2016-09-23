@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - Creative v3.3.7+1 (http://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
 html,
 body {
   height: 100%;
@@ -12,6 +7,7 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
+  border-color: #F39200;
   border-width: 3px;
   max-width: 50px;
 }
@@ -22,11 +18,11 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  /*color: #F05F40;*/
+  color: #F39200;
 }
 a:hover,
 a:focus {
-  color: #eb3812;
+  color: #c07300;
 }
 h1,
 h2,
@@ -40,6 +36,9 @@ p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+.bg-primary {
+  background-color: #F39200;
 }
 .bg-dark {
   background-color: #222222;
@@ -66,13 +65,14 @@ aside {
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
+  color: #F39200;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #eb3812;
+  color: #c07300;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-weight: 700;
@@ -87,9 +87,13 @@ aside {
   font-size: 13px;
   color: #222222;
 }
-
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+  color: #F39200;
+}
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
+  color: #F39200 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -121,15 +125,20 @@ aside {
     border-color: rgba(34, 34, 34, 0.05);
   }
   .navbar-default.affix .navbar-header .navbar-brand {
+    color: #F39200;
     font-size: 14px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #c07300;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
     color: #222222;
+  }
+  .navbar-default.affix .nav > li > a:hover,
+  .navbar-default.affix .nav > li > a:focus:hover {
+    color: #F39200;
   }
 }
 header {
@@ -141,6 +150,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
+  background-image: url('../img/header.jpg');
   text-align: center;
   color: white;
 }
@@ -155,6 +165,7 @@ header .header-content .header-content-inner h1 {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 30px;
 }
 header .header-content .header-content-inner hr {
   margin: 30px auto;
@@ -212,14 +223,12 @@ header .header-content .header-content-inner p {
   display: block;
   max-width: 650px;
   margin: 0 auto;
-  max-height:315px;
-  overflow: hidden;
 }
 .portfolio-box .portfolio-box-caption {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(243, 146, 0, 0.9);
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -267,7 +276,7 @@ header .header-content .header-content-inner p {
   margin: 0 auto 20px;
 }
 .text-primary {
-  color: #F05F40;
+  color: #F39200;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -323,8 +332,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: white;
-  background-color: #F05F40;
-  border-color: #F05F40;
+  background-color: #F39200;
+  border-color: #F39200;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -336,8 +345,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  background-color: #da8300;
+  border-color: #cf7d00;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -362,11 +371,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #F05F40;
-  border-color: #F05F40;
+  background-color: #F39200;
+  border-color: #F39200;
 }
 .btn-primary .badge {
-  color: #F05F40;
+  color: #F39200;
   background-color: white;
 }
 .btn {

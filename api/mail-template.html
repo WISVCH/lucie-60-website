@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Tickets!</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+</head>
+<body style=""/>
+<style type="text/css">
+	body {
+		background-color: white; 
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: 20px 130px;
+		background-image: url(https://ch.tudelft.nl/other/bigowl.gif);
+		color: black;
+		position: absolute;
+		width: 700px;
+		text-align: center;
+	}
+	body, p, td {
+		font-size: 14px;
+		font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;;
+	}
+	img {
+		border-style: none;
+	}
+</style>
+<img border="0" width="700" height="65" src="https://ch.tudelft.nl/other/maillingkopje2.png" />
+<p>Lieve deelnemer,</p>
+<p>Hier zijn je tickets!.</p>
+<p>Neem je unieke nummer naar het evenement.</p>
+
+
+
+<!-- Lijst met unieke nummer voor ieder evenement -->
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+    <tr>
+        <td align="center" valign="top">
+            <table border="0" cellpadding="20" cellspacing="0" width="600" id="emailContainer">
+                <thead>
+                <tr>
+                    <th align="left" valign="top">
+                        Evenement
+                    </th>
+                    <th align="left" valign="top">
+                        Naam
+                    </th>
+					<th align="right" valign="top">
+                        Unieke code
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                    %tablecontent%
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

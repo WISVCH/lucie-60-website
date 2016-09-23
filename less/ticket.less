@@ -1,0 +1,67 @@
+@import "variables.less";
+@import "mixins.less";
+
+.ticket-container {
+  .ticket {
+    margin-bottom: 30px;
+
+    .ticket-images{
+      display: block;
+      height: 200px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    .ticket-description {
+      position: relative;
+
+      span.date {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        background: @theme-primary;
+        color: @white;
+      }
+
+      h1 {
+        font-size: 24px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid @gray-light
+      }
+
+      p {
+        display: block;
+        height: 72px;
+      }
+
+      span.price {
+        display: inline-block;
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+      }
+      span.sold {
+        display: inline-block;
+        color: #ccc;
+        float: left;
+      }
+    }
+  }
+
+  .ticket-button {
+    background: @theme-primary;
+    border-radius: 0;
+    width: 100%;
+    color: @white;
+    padding: 10px 0;
+  }
+}
+
+
+.basket-table {
+  h4 {
+    margin: 0 0 10px 0;
+  }
+}
