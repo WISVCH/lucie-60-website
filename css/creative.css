@@ -150,7 +150,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  background-color: #5DC5EA;
   text-align: center;
   color: white;
 }
@@ -222,7 +222,10 @@ header .header-content .header-content-inner p {
   position: relative;
   display: block;
   max-width: 650px;
+  max-height:475px;
+  overflow:hidden;
   margin: 0 auto;
+
 }
 .portfolio-box .portfolio-box-caption {
   color: white;
