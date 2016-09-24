@@ -19,72 +19,96 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
     <title>#Trending Mail</title>
-</head>
+    <style type="text/css">
+        .tickets tr td {
+            padding: 8px;
+            border-top: 1px solid #ccc;
+        }
+    </style></head>
 <body style="margin: 0; padding: 0; font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;">
-    <table cellpadding="0" cellspacing="0" width="100%">
-        <tr>
-            <td>
-                <table align="center" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse">
-                    <tr>
-                        <td align="center" bgcolor="#5DC5EA" style="padding: 20px 0 20px 0;">
-                            <img src="https://lustrum.ch/other/logo.png" width="400"
-                                 style="display: block;" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" bgcolor="#F39200" style="padding: 30px 30px 30px 30px">
-                            <table cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td>
-                                        <p>Dear <span th:text="${name}">User</span>,</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 20px 0 20px 0;">
-                                        <p>Here are your tickets! Don't forget to bring your code to the event.</p>
-                                        <!-- <p th:utext="${message}">Message</p> -->
-                                    </td>
-                                </tr>
+<body style="margin: 0; padding: 0; font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;">
+<table cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+        <td>
+            <table align="center" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse">
+                <tbody><tr>
+                    <td align="center" bgcolor="#5DC5EA" style="padding: 20px 0 20px 0;border-bottom: 10px solid #f8be66;">
+                        <img src="https://lustrum.ch/other/logo.png" width="400" style="display: block;">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="" style="padding: 10px 20px;">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tbody><tr>
+                                <td style="
+    padding: 20xp 0 0 0;
+">
+                                    <p>Dear <span th:text="${name}">user</span>,</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="
+    padding: 20px 0;
+">
+                                    <p>Here are your tickets! Don't forget to bring your code to the event.</p>
+                                    <!-- <p th:utext="${message}">Message</p> -->
+                                </td>
+                            </tr>
 
-                                <tr>
-                                  <td>
-                                    <table border="0" cellpadding="20" cellspacing="0" width="600" id="emailContainer">
-                                      <thead>
-                                        <tr>
-                                          <td align="center" valign="top">
-                                              <span th:text="${event}">Event</span>
-                                          </td>
-                                          <td align="center" valign="top">
-                                              <span th:text="${name}">Name</span>
-                                          </td>
-                                          <td align="center" valign="top">
-                                              <span th:text="${id}">Unique ID</span>
-                                          </td>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
+                            <tr>
+                                <td><table border="0" cellpadding="20" cellspacing="0" width="600" id="emailContainer" style="
+">
+                                    <thead style="
+">
+                                    <tr style="
+">
+                                        <th align="left" valign="top" style="
+    padding: 8px;
+    border-bottom: 2px solid #ccc;
+">
+                                            <span th:text="${event}">Event</span>
+                                        </th>
+                                        <th align="left" valign="top" style="
+    border-bottom: 2px solid #ccc;
+    padding: 8px;
+">
+                                            <span th:text="${name}">Name</span>
+                                        </th>
+                                        <th align="left" valign="top" style="
+    border-bottom: 2px solid #ccc;
+    padding: 8px;
+">
+                                            <span th:text="${id}">Unique ID</span>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="tickets">
                                         %tablecontent%
-                                      </tbody>
-                                      
-                                    </table>
-                                  </td>
-                                </tr>
+                                    </tbody>
+
+                                </table>
+                                </td>
+                            </tr>
 
 
-                                <tr>
-                                    <td style="padding-top: 20px;">
-                                        Kind regards,
-                                        <br />
-                                        LuCie 2016-2017
-                                    </td>
-                                </tr>
-                            </table>
+                            <tr>
+                                <td style="padding-top: 20px;"><b>Best regards,</b>
+                                    <br><br>
 
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                                    LuCie 2016-2017
+                                </td>
+                            </tr>
+                            </tbody></table>
+
+                    </td>
+                </tr>
+                </tbody></table>
+        </td>
+    </tr>
+    </tbody></table>
+
+
+</body>
+
 </body>
 </html>

@@ -24,7 +24,14 @@ if (isset($_POST['addTicket'])) {
 include_once "pages/components/header.php";
 
 
-?>
+if (
+    $_SERVER['PHP_AUTH_USER'] === "svenp" ||
+    $_SERVER['PHP_AUTH_USER'] === "karimo" ||
+    $_SERVER['PHP_AUTH_USER'] === "lucie" ||
+    $_SERVER['PHP_AUTH_USER'] === "galacie"
+) {
+    ?>
+
     <section id="about">
         <div class="container">
             <div class="row">
@@ -47,8 +54,8 @@ include_once "pages/components/header.php";
                         <tbody>
                         <?php
                         foreach ($tickets->getTickets() as $ticket) {
-                            $row = "<tr data-json='" .stripslashes(json_encode($ticket, JSON_HEX_TAG | JSON_HEX_APOS |
-                                    JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE)). "'>
+                            $row = "<tr data-json='" . stripslashes(json_encode($ticket, JSON_HEX_TAG | JSON_HEX_APOS |
+                                    JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE)) . "'>
                             <td class='clickable'>" . $ticket->getId() . "</td>
                             <td class='clickable'>" . $ticket->getName() . "</td>
                             <td class='clickable'>" . $ticket->getDescription() . "</td>
@@ -70,105 +77,6 @@ include_once "pages/components/header.php";
             </div>
         </div>
     </section>
-
-
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2 class="section-heading">Orders</h2>
-                    <table class="table" id="orderOverview">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Key</th>
-                            <th>Consumer name</th>
-                            <th>Consumer account</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Created</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        foreach (OrderMapper::getInstance()->getOrders() as $order) {
-                            $row = "<tr data-json='" .stripslashes(json_encode($order, JSON_HEX_TAG | JSON_HEX_APOS |
-                                   JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE)). "'>
-                                <td>" . $order->getId() . "</td>
-                                <td>" . $order->getOrderKey() . "</td>
-                                <td>" . $order->getOrderAccountInfo()->consumerName . "</td>
-                                <td>" . $order->getOrderAccountInfo()->consumerAccount  . "</td>
-                                <td>" . money_format('%(#1n', $order->getOrderAmount()) . "</td>
-                                <td>" . $order->getOrderStatus() . "</td>
-                                <td>" . $order->getCreatedAt() . "</td>
-                            </tr>";
-
-                            echo $row;
-                        }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document" style="width: calc(80vw);">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="basketLabel">Order <span class="order_key"></span></h4>
-                </div>
-                <div class="modal-body">
-                    <h5>Order details</h5>
-                    <table class="table table-striped">
-                        <tbody>
-                        <tr>
-                            <th>Consumer name</th>
-                            <td><span class="consumer_name"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Consumer account</th>
-                            <td><span class="consumer_account"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Amount</th>
-                            <td><span class="order_amount"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Status</th>
-                            <td><span class="order_status"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Created</th>
-                            <td><span class="order_created"></span></td>
-                        </tr>
-                        </tbody>
-                    </table>
-
-                    <h5>Tickets details</h5>
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Owner name</th>
-                            <th>Owner email</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody class="ticket-details"></tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document" style="width: calc(80vw);">
@@ -260,9 +168,114 @@ include_once "pages/components/header.php";
         </div>
     </div>
 
+    <?php
+}
 
-<?php
+if (
+    $_SERVER['PHP_AUTH_USER'] === "svenp" ||
+    $_SERVER['PHP_AUTH_USER'] === "karimo"
+) {
+    ?>
 
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="section-heading">Orders</h2>
+                    <table class="table" id="orderOverview">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Key</th>
+                            <th>Consumer name</th>
+                            <th>Consumer account</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach (OrderMapper::getInstance()->getOrders() as $order) {
+                            $row = "<tr data-json='" . stripslashes(json_encode($order, JSON_HEX_TAG | JSON_HEX_APOS |
+                                    JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE)) . "'>
+                                <td>" . $order->getId() . "</td>
+                                <td>" . $order->getOrderKey() . "</td>
+                                <td>" . $order->getOrderAccountInfo()->consumerName . "</td>
+                                <td>" . $order->getOrderAccountInfo()->consumerAccount . "</td>
+                                <td>" . money_format('%(#1n', $order->getOrderAmount()) . "</td>
+                                <td>" . $order->getOrderStatus() . "</td>
+                                <td>" . $order->getCreatedAt() . "</td>
+                            </tr>";
+
+                            echo $row;
+                        }
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="width: calc(80vw);">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="basketLabel">Order <span class="order_key"></span></h4>
+                </div>
+                <div class="modal-body">
+                    <h5>Order details</h5>
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <th>Consumer name</th>
+                            <td><span class="consumer_name"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Consumer account</th>
+                            <td><span class="consumer_account"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Amount</th>
+                            <td><span class="order_amount"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Status</th>
+                            <td><span class="order_status"></span></td>
+                        </tr>
+                        <tr>
+                            <th>Created</th>
+                            <td><span class="order_created"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h5>Tickets details</h5>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Owner name</th>
+                            <th>Owner email</th>
+                            <th>Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody class="ticket-details"></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php
+}
 include_once "pages/components/footer.php";
 
 ?>

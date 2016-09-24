@@ -40,6 +40,11 @@ $app->group('/order', function () {
 
         return $response;
     });
+
+    $this->post('/webhook/', function($request, $response, $argd) {
+        $order = new OrderController();
+        $order->updatePayment($request->getParsedBody()['id']);
+    });
 });
 
 $app->group('/ticket', function () {
