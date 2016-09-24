@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Lustrum Dashboard"
+AuthUserFile /srv/www/commissies/lucie/public_html/api/admin/.htpasswd
+Require valid-user

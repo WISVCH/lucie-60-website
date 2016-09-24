@@ -122,9 +122,7 @@ $(document).ready(function () {
         basket.html("");
         $.each(tickets, function(k, v) {
             var ticket = tableRow;
-            console.log(v.amount.replace(",", ".").split("€")[1]);
             sum += parseFloat(v.amount.replace(",", ".").split("€")[1]);
-            console.log(sum);
             v.ticketNumber = k + 1;
             $.each(v, function (key, value) {
                 ticket = ticket.split("%" + key + "%").join(value);

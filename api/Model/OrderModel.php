@@ -19,6 +19,9 @@ class OrderModel extends BaseModel
     public $order_payment_url = 0;
     public $order_status = 'open';
 
+    public $order_account_info = null;
+    public $tickets = null;
+
     /**
      * @return mixed
      */
@@ -132,5 +135,46 @@ class OrderModel extends BaseModel
         $this->order_status = $order_status;
         return $this;
     }
+
+    /**
+     * @return null
+     */
+    public function getOrderAccountInfo()
+    {
+        return $this->order_account_info;
+    }
+
+    /**
+     * @param null $order_account_info
+     *
+     * @return OrderModel
+     */
+    public function setOrderAccountInfo($order_account_info)
+    {
+        $this->order_account_info = $order_account_info;
+        return $this;
+    }
+
+    /**
+     * @return null
+     */
+    public function getTickets()
+    {
+        return $this->tickets;
+    }
+
+    /**
+     * @param null $tickets
+     *
+     * @return OrderModel
+     */
+    public function setTickets($tickets)
+    {
+        $this->tickets = $tickets;
+        return $this;
+    }
+
+
+
 
 }

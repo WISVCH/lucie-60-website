@@ -42,6 +42,32 @@ class OrderMapper extends BaseMapper
     }
 
     /**
+     * @return array
+     */
+    public function getOrders()
+    {
+        global $database;
+        $database->orderBy('updated_at', 'DESC');
+
+        $mollie = new \Mollie_API_Client();
+        $mollie->setApiKey(MOLLIE_KEY);
+
+        $return = [];
+        foreach ($database->get('orders') as $tickets) {
+            $order = $this->create($tickets);
+            $order->setOrderAccountInfo(
+                $mollie->payments->get($order->getOrderKey())->details
+            )->setTickets(
+                TicketSoldMapper::getInstance()->getTicketsByOrderKey($order->getOrderKey())
+            );
+
+            $return[] = $order;
+        }
+
+        return $return;
+    }
+
+    /**
      * Populate the DomainObject with the values
      * from the data array.
      *
