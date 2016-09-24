@@ -23,6 +23,8 @@ class TicketModel extends BaseModel
 
     public $sold;
 
+    public $ticketsSold;
+
     /**
      * @return mixed
      */
@@ -199,5 +201,26 @@ class TicketModel extends BaseModel
         $this->background = $background;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTicketsSold()
+    {
+        return $this->ticketsSold;
+    }
+
+    /**
+     * @param mixed $ticketsSold
+     *
+     * @return TicketModel
+     */
+    public function setTicketsSold($ticketsSold)
+    {
+        $this->ticketsSold = $ticketsSold;
+        return $this;
+    }
+
+
 
 }

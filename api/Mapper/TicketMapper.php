@@ -71,7 +71,10 @@ class TicketMapper extends BaseMapper
         return $obj;
     }
 
-    public function getTickets()
+    /**
+     * @return array
+     */
+    public function getAvailableTickets()
     {
         global $database;
         $database->where('available', 1);
@@ -80,6 +83,26 @@ class TicketMapper extends BaseMapper
         $return = [];
         foreach ($database->get('tickets') as $tickets) {
             $return[] = $this->create($tickets);
+        }
+
+        return $return;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTickets()
+    {
+        global $database;
+        $database->orderBy('date', 'ASC');
+
+        $return = [];
+        foreach ($database->get('tickets') as $tickets) {
+            $ticket = $this->create($tickets);
+            $ticket->setTicketsSold(
+                TicketSoldMapper::getInstance()->getTicketsByTicketKey($ticket->getKey())
+            );
+            $return[] = $ticket;
         }
 
         return $return;
@@ -104,7 +127,22 @@ class TicketMapper extends BaseMapper
      */
     protected function _insert(BaseModel $obj)
     {
-        // TODO: Implement _insert() method.
+        global $database;
+
+        /** @var \MysqliDb $database */
+        $id = $database->insert('tickets', [
+            'ticket_key' => $obj->getKey(),
+            'name' => $obj->getName(),
+            'description' => $obj->getDescription(),
+            'amount' => $obj->getAmount(),
+            'max_sold' => $obj->getMaxSold(),
+            'available' => $obj->getAvailable(),
+            'background' => $obj->getBackground(),
+            'created_at' => date("Y-m-d h:i:s"),
+            'updated_at' => date("Y-m-d h:i:s")
+        ]);
+
+        $obj->setId($id);
     }
 
     /**
