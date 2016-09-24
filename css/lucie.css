@@ -114,3 +114,18 @@ hr {
 .ticket-container button {
     margin-bottom: 15px;
 }
+
+.ticket-bougth-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.trendingOwl {
+    margin-top: 45px;
+    background-image: url('/img/logo.png');
+    height: 250px;
+    width: 725px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
