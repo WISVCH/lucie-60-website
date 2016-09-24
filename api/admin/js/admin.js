@@ -38,8 +38,10 @@ $(document).ready(function() {
 
         var modal = $('#orderModal');
         modal.find('.order_key').text(row.order_key);
-        modal.find('.consumer_name').text(row.order_account_info.consumerName);
-        modal.find('.consumer_account').text(row.order_account_info.consumerAccount);
+        if (row.order_account_info != null) {
+            modal.find('.consumer_name').text(row.order_account_info.consumerName);
+            modal.find('.consumer_account').text(row.order_account_info.consumerAccount);
+        }
         modal.find('.order_amount').text("€" + row.order_amount.toFixed(2).replace(".", ","));
         modal.find('.order_status').text(row.order_status);
         modal.find('.order_created').text(row.created_at);
