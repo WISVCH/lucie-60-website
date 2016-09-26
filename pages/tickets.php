@@ -108,7 +108,7 @@
                     <p>%description%</p>
 
                     <div>
-                        <span class="sold">%sold%/%max_sold% tickets sold</span>
+                        <span class="sold">%diff_sold% tickets left</span>
                         <span class="price">%amount%</span>
                     </div>
                 </div>
