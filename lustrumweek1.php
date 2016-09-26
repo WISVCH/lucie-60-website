@@ -39,23 +39,24 @@
 
             <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="activity-title">Lunch Lecture</h2>
-                <p class="activity-date">11 October</p>
+                <p class="activity-date">11 October 12:30-13:45</p>
                 <p class="activity-date">Price: Free!</p>
                 <p class="activity-description">
                     Join us for lunch and some food for thought! Our speaker is Vincent Warmerdam, Data Scientist at GoDataDriven in Amsterdam
                     In his spare time Vincent also maintains a blog under the name Koaning and discusses all things Data Science.
                     What little people know about Vincent is that he is also a real-life Pokemon Master through the power of Data Science!
                     Want to know how this works? Come to our lecture and find out! No need to buy tickets, but you will have to register
-                    <a href="wisv.ch/lecture" class="light">here</a>!
+                    <a href="wisv.ch/lustrumlecture" class="light">here</a>!
                 </p>
             </div>
 
             <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="activity-title">Beer Tasting</h2>
-                <p class="activity-date">12 October</p>
+                <p class="activity-date">12 October 17:00-18:15</p>
                 <p class="activity-date">Price: &euro; 5,-</p>
                 <p class="activity-description">
-                    Come join us for a tour and a beer tasting at 'De Koperen Kat'!
+                    Craft beer enthusiasts rejoice! Come join us for a tour and a beer tasting at 'De Koperen Kat'! Here we will receive a tour of Delft its
+                    very own brewery. After this tour we will get to sample some of their finest craft beers together. Need we say more?
                 </p>
             </div>
 
@@ -84,36 +85,6 @@
         </div>
     </div>
 
-</section>
-
-<section class="bg-primary" id="contact">
-    <div class="container">
-        <div class ="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p>W.I.S.V. ‘Christiaan Huygens’ (CH) is the study association for students of Applied Mathematics and Computer Science at the Delft University of Technology.</p>
-            </div>
-
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                <p>015 278 2532</p>
-            </div>
-
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-map-marker fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>Mekelweg 4, 2628CD Delft</p>
-                <hr class="light">
-            </div>
-
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p><a href="mailto:lucie@ch.tudelft.nl" class="light">lucie@ch.tudelft.nl</a></p>
-            </div>
-
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p>Copyright © 2016 by W.I.S.V. ‘Christiaan Huygens’. All rights reserved.</p>
-            </div>
-        </div>
-    </div>
 </section>
 
 
