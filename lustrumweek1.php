@@ -42,7 +42,10 @@
                 <p class="activity-date">11 October</p>
                 <p class="activity-date">Price: Free!</p>
                 <p class="activity-description">
-                    Join us for lunch and some food for thought! No need to buy tickets, but you will have to register
+                    Join us for lunch and some food for thought! Our speaker is Vincent Warmerdam, Data Scientist at GoDataDriven in Amsterdam
+                    In his spare time Vincent also maintains a blog under the name Koaning and discusses all things Data Science.
+                    What little people know about Vincent is that he is also a real-life Pokemon Master through the power of Data Science!
+                    Want to know how this works? Come to our lecture and find out! No need to buy tickets, but you will have to register
                     <a href="wisv.ch/lecture" class="light">here</a>!
                 </p>
             </div>
