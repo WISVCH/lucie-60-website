@@ -67,7 +67,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="activity-title">First lustrum week</h2>
                     <p class="activity-date">10 October - 14 October</p>
-                    <p class="activity-description">To start this year in a festive manner, we will start with lustrumweek 1. This week will begin with a grand opening with a spectacular show, after which we will enjoy a BBQ together. During the rest of the week there will be a lunch lecture by Vincent Warmerdam and a workshop by Optiver. There will be a beertasting at the Koperen Kat on wednesday evening and on friday we will end the week with a `friends from the past'-day, to show your friends from highschool what it is like to study in Delft.
+                    <p class="activity-description">To start this year in a festive manner, we will start with lustrumweek 1. This week will begin with a grand opening with a spectacular show, after which we will enjoy a BBQ together. During the rest of the week there will be a lunch lecture by Vincent Warmerdam and a workshop by Optiver. There will be a beertasting at the Koperen Kat on wednesday evening and on friday we will end the week with a `friends from the past'-day, to show your friends from highschool what it is like to study in Delft. For more detailed info click <a href="lustrumweek1.php" class="light">here</a>
                     </p>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="row activity">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2 class="activity-title">Hitchhiking competition</h2>
-                    <p class="activity-date">18 November - 19 November</p>
+                    <p class="activity-date">19 November - 20 November</p>
                     <p class="activity-detail">Hitchhike to an unknown destination in Europe in a weekend!
                     On the morning of the travel day, the destination will be announced. The goal is to reach this city as fast as possible by hitchhiking. When you have finally reached the city, the group will enjoy a night out and spend the night in a hostel. The return trip is organised by the lustrum committee.</p>
                 </div>
