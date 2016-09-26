@@ -78,7 +78,7 @@
                 <p class="activity-description">
                     This is a great opportunity to take 3 friends from highschool to show what you have been up to in
                     Delft! We'll start at the faculty at EEMCS so that your friends get an impression what you actually
-                    study and in what kind of setting. We'll conclude this part of the programme in the /Pub while
+                    study and in what kind of setting. To help them with this, we have two lecturers giving sample lectures for them. Then they will get a tour throught the faculty. We'll conclude this part of the programme in the /Pub while
                     enjoying beer and pizza! After that we will organise a Pub crawl trough the city centre.
                 </p>
             </div>
