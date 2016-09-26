@@ -27,6 +27,7 @@ $(document).ready(function () {
                 year: "numeric"
             });
             v.amount = "&euro; " + v.amount.toFixed(2).replace(".", ",");
+            v.diff_sold = v.max_sold - v.sold;
             $.each(v, function (key, value) {
                 ticket = ticket.split("%" + key + "%").join(value);
             });
