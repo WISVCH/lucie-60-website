@@ -73,7 +73,7 @@
 
             <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="activity-title">Friends from the Past Day</h2>
-                <p class="activity-date">14 October</p>
+                <p class="activity-date">14 October 15:30-22:30(and beyond!)</p>
                 <p class="activity-date">Price: &euro;5,-</p>
                 <p class="activity-description">
                     This is a great opportunity to take 3 friends from highschool to show what you have been up to in
