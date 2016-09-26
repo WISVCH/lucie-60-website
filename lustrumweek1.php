@@ -62,12 +62,12 @@
 
             <div class="col-lg-8 col-lg-offset-2">
                 <h2 class="activity-title">Optiver Workshop</h2>
-                <p class="activity-date">13 October</p>
+                <p class="activity-date">13 October 08:45-17:00</p>
                 <p class="activity-date">Price: Free!</p>
                 <p class="activity-description">
                     If you are interested in finance and algorithmic trading, we have the ultimate workshop for you!
                     We will visit Optiver at their office in Amsterdam where we will get some hands-on experience with
-                    these topics. Admission is free, but you will have to register!
+                    these topics. Admission is free, but you will have to register! Note that this activity will take up a full-day.
                 </p>
             </div>
 
