@@ -170,54 +170,54 @@
         </div>
     </section>
 
-    <section class="no-padding" id="pictures" class = "bg-secondary">
-        <div class="container-fluid picturebox">
-            <div class="row no-gutter">
-
-                <div class="col-lg-4 col-sm-6">
-
-                    <a href="cantusphotos.php" class="portfolio-box">
-                        <img src="img/photos/P1100571.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    Cantus
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-
-                    <a href="#pictures" class="portfolio-box">
-                        <img src="img/photos/photoplaceholderUil.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    Coming Soon!
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-
-                    <a href="#pictures" class="portfolio-box">
-                        <img src="img/photos/photoplaceholderUil.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-name">
-                                    Coming Soon!
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
+<!--    <section class="no-padding" id="pictures" class = "bg-secondary">-->
+<!--        <div class="container-fluid picturebox">-->
+<!--            <div class="row no-gutter">-->
+<!---->
+<!--                <div class="col-lg-4 col-sm-6">-->
+<!---->
+<!--                    <a href="cantusphotos.php" class="portfolio-box">-->
+<!--                        <img src="img/photos/P1100571.jpg" class="img-responsive" alt="">-->
+<!--                        <div class="portfolio-box-caption">-->
+<!--                            <div class="portfolio-box-caption-content">-->
+<!--                                <div class="project-name">-->
+<!--                                    Cantus-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-sm-6">-->
+<!---->
+<!--                    <a href="#pictures" class="portfolio-box">-->
+<!--                        <img src="img/photos/photoplaceholderUil.jpg" class="img-responsive" alt="">-->
+<!--                        <div class="portfolio-box-caption">-->
+<!--                            <div class="portfolio-box-caption-content">-->
+<!--                                <div class="project-name">-->
+<!--                                    Coming Soon!-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-sm-6">-->
+<!---->
+<!--                    <a href="#pictures" class="portfolio-box">-->
+<!--                        <img src="img/photos/photoplaceholderUil.jpg" class="img-responsive" alt="">-->
+<!--                        <div class="portfolio-box-caption">-->
+<!--                            <div class="portfolio-box-caption-content">-->
+<!--                                <div class="project-name">-->
+<!--                                    Coming Soon!-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!---->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
     <section class="bg-secondary" id="committee">
         <div class="container">
