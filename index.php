@@ -187,6 +187,32 @@
                         </div>
                     </a>
                 </div>
+                <div class="col-lg-4 col-sm-6">
+
+                    <a href="#pictures" class="portfolio-box">
+                        <img src="img/photos/photoplaceholderUil.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Coming Soon!
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+
+                    <a href="#pictures" class="portfolio-box">
+                        <img src="img/photos/photoplaceholderUil.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Coming Soon!
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
 
             </div>
