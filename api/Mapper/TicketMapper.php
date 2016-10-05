@@ -57,6 +57,7 @@ class TicketMapper extends BaseMapper
             ->setAvailable($data['available'])
             ->setMaxSold($data['max_sold'])
             ->setBackground($data['background'])
+            ->setMaxHidden($data['max_hidden'])
             ->setUpdatedAt($data['updated_at'])
             ->setCreatedAt($data['created_at'])
             ->setSold(
@@ -138,6 +139,7 @@ class TicketMapper extends BaseMapper
             'max_sold' => $obj->getMaxSold(),
             'available' => $obj->getAvailable(),
             'background' => $obj->getBackground(),
+            'max_hidden' => $obj->getMaxHidden(),
             'created_at' => date("Y-m-d h:i:s"),
             'updated_at' => date("Y-m-d h:i:s")
         ]);
@@ -155,7 +157,14 @@ class TicketMapper extends BaseMapper
         global $database;
         $database->where('id', $obj->getId());
         $database->update('tickets', [
-            'available' => $obj->getAvailable()
+            'name' => $obj->getName(),
+            'description' => $obj->getDescription(),
+            'amount' => $obj->getAmount(),
+            'max_sold' => $obj->getMaxSold(),
+            'available' => $obj->getAvailable(),
+            'max_hidden' => $obj->getMaxHidden(),
+            'background' => $obj->getBackground(),
+            'updated_at' => date("Y-m-d h:i:s")
         ]);
     }
 

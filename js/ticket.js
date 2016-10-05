@@ -28,6 +28,7 @@ $(document).ready(function () {
             });
             v.amount = "&euro; " + v.amount.toFixed(2).replace(".", ",");
             v.diff_sold = v.max_sold - v.sold;
+            v.hidden = (v.max_hidden == 1) ? "style='display: none;'" : "";
             $.each(v, function (key, value) {
                 ticket = ticket.split("%" + key + "%").join(value);
             });

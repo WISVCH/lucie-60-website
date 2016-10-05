@@ -10,27 +10,37 @@ require "../autoload.php";
 require "../config.php";
 
 $tickets = new \Controller\TicketController();
+
 if (isset($_POST['addTicket'])) {
     $tickets->addTicket($_POST);
+
     header("Location: https://lustrum.ch/dashboard/");
-} else if (isset($_POST['submit_hidden'])){
+} else if (isset($_POST['submit_hidden'])) {
     $ticket = $tickets->getByKey($_POST['hidden_ticket']);
     $ticket->setAvailable($ticket->getAvailable() ^ 1);
 
     TicketMapper::getInstance()->save($ticket);
+
+    header("Location: https://lustrum.ch/dashboard/");
+} else if (isset($_POST['editTicket'])) {
+    $ticket = $tickets->getByKey($_POST['ticket_key']);
+    $ticket->setAvailable($_POST['available'])
+        ->setAmount($_POST['amount'])
+        ->setBackground($_POST['background'])
+        ->setDate($_POST['date'])
+        ->setMaxSold($_POST['max_sold'])
+        ->setDescription($_POST['description'])
+        ->setMaxHidden($_POST['max_hidden']);
+
+    TicketMapper::getInstance()->save($ticket);
+
     header("Location: https://lustrum.ch/dashboard/");
 }
 
+
 include_once "pages/components/header.php";
 
-
-if (
-    $_SERVER['PHP_AUTH_USER'] === "svenp" ||
-    $_SERVER['PHP_AUTH_USER'] === "karimo" ||
-    $_SERVER['PHP_AUTH_USER'] === "lucie" ||
-    $_SERVER['PHP_AUTH_USER'] === "galacie"
-) {
-    ?>
+?>
 
     <section id="about">
         <div class="container">
@@ -49,6 +59,7 @@ if (
                             <th>Sold</th>
                             <th>Available</th>
                             <th>Background</th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -66,6 +77,7 @@ if (
                             <td class='clickable'><a href='" . $ticket->getBackground() . "'>" . substr($ticket->getBackground(), 0,
                                     20) .
                                 "...</a></td>
+                            <td><span id='editTicket' class='btn btn-danger'>Edit</span></td>
                         </tr>";
 
                             echo $row;
@@ -77,105 +89,6 @@ if (
             </div>
         </div>
     </section>
-
-    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document" style="width: calc(80vw);">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="basketLabel">Ticket <span class="ticket_name"></span></h4>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="POST">
-                        <input type="hidden" name="hidden_ticket" id="hidden_value" value="">
-                        <input type="submit" name="submit_hidden" value="Show/Hide" class="btn btn-danger">
-                    </form>
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Unique number</th>
-                        </tr>
-                        </thead>
-                        <tbody class="consumers-details"></tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="ticketAddModal" tabindex="-1" role="dialog" aria-labelledby="addTicket">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="basketLabel">Add ticket</h4>
-                </div>
-                <form action="" method="POST">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="name">Name: </label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                   placeholder="Ticket name">
-                        </div>
-                        <div class="form-group">
-                            <label for="description">Description: </label>
-                            <textarea name="description" class="form-control" id="description" cols="30"
-                                      rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="amount">Price: </label>
-                            <input type="number" step="0.01" class="form-control" id="amount" name="amount"
-                                   placeholder="Price">
-                        </div>
-                        <div class="form-group">
-                            <label for="date">Date: </label>
-                            <input type="date" class="form-control" id="date" name="date"
-                                   placeholder="Date event">
-                        </div>
-                        <div class="form-group">
-                            <label for="max_sold">Max sold: </label>
-                            <input type="number" class="form-control" id="max_sold" name="max_sold"
-                                   placeholder="Max sold tickets">
-                        </div>
-                        <div class="form-group">
-                            <label for="available">Available: </label>
-                            <select name="available" id="available" class="form-control">
-                                <option value="0">False</option>
-                                <option value="1">True</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="background">Background url: </label>
-                            <input type="text" class="form-control" id="background" name="background"
-                                   placeholder="URL to background">
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <input type="submit" class="btn btn-danger" name="addTicket">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <?php
-}
-
-if (
-    $_SERVER['PHP_AUTH_USER'] === "svenp" ||
-    $_SERVER['PHP_AUTH_USER'] === "karimo"
-) {
-    ?>
 
     <section id="about">
         <div class="container">
@@ -218,64 +131,13 @@ if (
         </div>
     </section>
 
-    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document" style="width: calc(80vw);">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="basketLabel">Order <span class="order_key"></span></h4>
-                </div>
-                <div class="modal-body">
-                    <h5>Order details</h5>
-                    <table class="table table-striped">
-                        <tbody>
-                        <tr>
-                            <th>Consumer name</th>
-                            <td><span class="consumer_name"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Consumer account</th>
-                            <td><span class="consumer_account"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Amount</th>
-                            <td><span class="order_amount"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Status</th>
-                            <td><span class="order_status"></span></td>
-                        </tr>
-                        <tr>
-                            <th>Created</th>
-                            <td><span class="order_created"></span></td>
-                        </tr>
-                        </tbody>
-                    </table>
 
-                    <h5>Tickets details</h5>
-                    <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Owner name</th>
-                            <th>Owner email</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody class="ticket-details"></tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php
+include_once "pages/components/blueprint_add_ticket.php";
+include_once "pages/components/blueprint_edit_ticket.php";
+include_once "pages/components/blueprint_overview_ticket.php";
+include_once "pages/components/blueprint_overview_order.php";
 
-    <?php
-}
 include_once "pages/components/footer.php";
 
 ?>
