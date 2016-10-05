@@ -4,6 +4,8 @@
 
 api/config.php
 
+.gitignore
+
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml

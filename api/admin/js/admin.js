@@ -15,7 +15,7 @@ $(document).ready(function() {
             }
         ]
     });
-    $('#ticketsOverview tbody tr').on('click', 'td', function () {
+    $('#ticketsOverview tbody tr').on('click', 'td.clickable', function () {
         var row = $(this).parent().data('json');
         var modal = $('#ticketModal');
 
@@ -27,6 +27,28 @@ $(document).ready(function() {
             consumers += "<tr><td>" + (k + 1) + "</td><td>" + v.user_name + "</td><td>" + v.user_email + "</td><td>" + v.unique_key + "</td></tr>"
         });
         modal.find('.consumers-details').html(consumers);
+
+        modal.modal('show');
+    });
+
+    $('#ticketsOverview tbody tr td').on('click', '#editTicket', function () {
+        var modal = $('#ticketEditModal');
+        var row = $(this).parent().parent().data('json');
+
+        console.log(row);
+
+        var d = new Date(row.date);
+        var day = ("0" + d.getDate()).slice(-2);
+        var month = ("0" + (d.getMonth() + 1)).slice(-2);
+        var date = d.getFullYear()+"-"+(month)+"-"+(day) ;
+
+        modal.find("#ticketKey").val(row.key);
+        modal.find("#name").val(row.name);
+        modal.find("#description").val(row.description);
+        modal.find("#amount").val(row.amount);
+        modal.find("#date").val(date);
+        modal.find("#max_sold").val(row.max_sold);
+        modal.find("#background").val(row.background);
 
         modal.modal('show');
     });

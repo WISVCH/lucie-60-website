@@ -108,7 +108,7 @@
                     <p>%description%</p>
 
                     <div>
-                        <span class="sold">%diff_sold% tickets left</span>
+                        <span class="sold" %hidden%>%diff_sold% tickets left</span>
                         <span class="price">%amount%</span>
                     </div>
                 </div>
