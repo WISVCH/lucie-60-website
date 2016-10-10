@@ -55,6 +55,24 @@ $app->group('/ticket', function () {
             return $response->withJson($tickets->getAllAvailableTickets());
         });
     });
+
+    $this->post('/scan', function($request, $response, $args) {
+        $tickets = new TicketController();
+
+        try {
+            return $response->withJson(
+                $tickets->getTicketByUID(
+                    $request->getParsedBody()['number'],
+                    $request->getParsedBody()['ticket']
+                )
+            );
+        } catch (Exception $e) {
+            return $response->withJson([
+                "status" => $e->getCode(),
+                "message" => $e->getMessage()
+            ]);
+        }
+    });
 });
 
 $app->run();

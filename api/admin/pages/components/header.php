@@ -45,7 +45,7 @@
 
 <body id="page-top">
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #31708f">
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #F05F40">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

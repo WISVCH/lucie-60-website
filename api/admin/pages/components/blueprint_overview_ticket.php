@@ -7,10 +7,6 @@
                 <h4 class="modal-title" id="basketLabel">Ticket <span class="ticket_name"></span></h4>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
-                    <input type="hidden" name="hidden_ticket" id="hidden_value" value="">
-                    <input type="submit" name="submit_hidden" value="Show/Hide" class="btn btn-danger">
-                </form>
                 <table class="table table-striped">
                     <thead>
                     <tr>

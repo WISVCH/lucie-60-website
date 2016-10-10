@@ -74,4 +74,9 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^tickets/?$ /pages/tickets.php [L]
 RewriteRule ^paymentcomplete/?$ /pages/payment_complete.php [L]
-RewriteRule ^dashboard/?$ /api/admin/index.php [L]
+
+
+RewriteRule ^dashboard/?$ /api/admin/pages/tickets.php [L]
+RewriteRule ^dashboard/tickets/?$ /api/admin/pages/tickets.php [L]
+RewriteRule ^dashboard/orders/?$ /api/admin/pages/orders.php [L]
+RewriteRule ^dashboard/scan/?$ /api/admin/pages/scan.php [L]

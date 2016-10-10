@@ -41,6 +41,20 @@ class OrderMapper extends BaseMapper
         }
     }
 
+
+    public function checkPaid($key) {
+        global $database;
+        $database->where('order_key', $key);
+        $database->where('order_status', 'paid');
+        $database->getOne('orders');
+
+        if ($database->count > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     /**
      * @return array
      */

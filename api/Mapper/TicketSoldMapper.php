@@ -10,6 +10,7 @@ namespace Mapper;
 
 
 use Exception\OrderNotFoundException;
+use Exception\TicketNotFoundException;
 use Model\BaseModel;
 use Model\TicketSoldModel;
 
@@ -35,6 +36,25 @@ class TicketSoldMapper extends BaseMapper
             return $tickets;
         } else {
             throw new OrderNotFoundException("Ticket from order " . $key . " not found!");
+        }
+    }
+
+    /**
+     * @param $uuid
+     *
+     * @return \Model\BaseModel
+     * @throws \Exception\TicketNotFoundException
+     */
+    public function getTicketByUID($uuid)
+    {
+        global $database;
+        $database->where('unique_key', $uuid);
+
+        $result = $database->getOne("tickets_sold");
+        if ($result !== null) {
+            return $this->create($result);
+        } else {
+            throw new TicketNotFoundException("No ticket found");
         }
     }
 
@@ -87,6 +107,7 @@ class TicketSoldMapper extends BaseMapper
             ->setUserName($data['user_name'])
             ->setUserEmail($data['user_email'])
             ->setUniqueKey($data['unique_key'])
+            ->setScanned($data['scanned'])
             ->setCreatedAt($data['created_at'])
             ->setUpdatedAt($data['updated_at']);
 
@@ -130,7 +151,11 @@ class TicketSoldMapper extends BaseMapper
      */
     protected function _update(BaseModel $obj)
     {
-        // TODO: Implement _update() method.
+        global $database;
+        $database->where('id', $obj->getId());
+        $database->update('tickets_sold', [
+            'scanned' => $obj->getScanned()
+        ]);
     }
 
     /**

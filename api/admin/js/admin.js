@@ -4,6 +4,8 @@
 
 $(document).ready(function() {
     var tickets = $('#ticketsOverview').DataTable({
+        "pageLength": 12,
+        "lengthChange": false,
         "columnDefs": [
             {
                 "targets": 1,
@@ -53,7 +55,10 @@ $(document).ready(function() {
         modal.modal('show');
     });
 
-    var orders = $('#orderOverview').DataTable();
+    var orders = $('#orderOverview').DataTable({
+        "pageLength": 12,
+        "lengthChange": false
+    });
 
     $('#orderOverview tbody').on('click', 'tr', function () {
         var row = $(this).data('json');

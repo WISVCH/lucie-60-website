@@ -17,6 +17,7 @@ class TicketSoldModel extends BaseModel
     public $ticket = null;
     public $user_name;
     public $user_email;
+    public $scanned = 0;
     public $unique_key = null;
 
     /**
@@ -130,6 +131,25 @@ class TicketSoldModel extends BaseModel
     public function setUniqueKey($unique_key)
     {
         $this->unique_key = $unique_key;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getScanned()
+    {
+        return $this->scanned;
+    }
+
+    /**
+     * @param int $scanned
+     *
+     * @return TicketSoldModel
+     */
+    public function setScanned($scanned)
+    {
+        $this->scanned = $scanned;
         return $this;
     }
 

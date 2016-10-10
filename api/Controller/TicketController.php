@@ -1,15 +1,22 @@
 <?php 
 namespace Controller;
 
+use Exception\AlreadyScannedException;
+use Exception\NotPaidException;
+use Mapper\OrderMapper;
 use Mapper\TicketMapper;
+use Mapper\TicketSoldMapper;
 
 class TicketController extends BaseController {
+
+    private $_soldMapper;
 
     /**
      * TicketController constructor.
      */
     public function __construct() {
 		$this->_mapper = new TicketMapper();
+        $this->_soldMapper = new TicketSoldMapper();
 	}
 
     /**
@@ -27,9 +34,43 @@ class TicketController extends BaseController {
         return $this->_mapper->getAvailableTickets();
     }
 
+    /**
+     * @return array
+     */
     public function getTickets()
     {
         return $this->_mapper->getTickets();
+    }
+
+    /**
+     * @param $uid
+     *
+     * @param $ticketID
+     *
+     * @return \Model\BaseModel
+     * @throws \Exception\AlreadyScannedException
+     * @throws \Exception\NotPaidException
+     */
+    public function getTicketByUID($uid, $ticketID)
+    {
+        $ticket = $this->_soldMapper->getTicketByUID($uid);
+
+        $orderMapper = new OrderMapper();
+        if ($orderMapper->checkPaid($ticket->getOrderKey())) {
+            if ($ticket->getScanned() == false) {
+                if ($ticket->getTicketKey() == $ticketID) {
+                    $ticket->setScanned(true);
+                    TicketSoldMapper::getInstance()->save(($ticket));
+                    return $ticket;
+                } else {
+                    throw new NotPaidException('Ticket is not for this event');
+                }
+            } else {
+                throw new AlreadyScannedException('Already scanned');
+            }
+        } else {
+            throw new NotPaidException('Not paid ticket');
+        }
     }
 
     public function addTicket($data) {
