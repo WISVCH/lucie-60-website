@@ -37,17 +37,35 @@ $(document).ready(function () {
         })
     });
 
+    $('#checkboxCH').change(function() {
+        if(this.checked) {
+            $("#addTicketToBasket").prop('disabled', false);
+        } else {
+            $("#addTicketToBasket").prop('disabled', true);
+        }
+    });
+
     $('#ticketModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);
         var key = button.data('key');
         var name = button.data('ticket');
         var amount = button.data('amount');
+        var required = button.data('required');
 
         var model = $(this);
         model.find("#ticketKey").val(key);
         model.find("#ticketName").val(name);
         model.find("#ticketAmount").val(amount);
         model.find("#modalLabel").html(name);
+
+        if ("1" == required) {
+            model.find("#requiredCH").show();
+            $("#checkboxCH").prop('checked', false);
+            model.find("#addTicketToBasket").prop('disabled', true);
+        } else {
+            model.find("#requiredCH").hide();
+            model.find("#addTicketToBasket").prop('disabled', false);
+        }
     });
 
     $('#addTicketToBasket').click(function() {
@@ -134,8 +152,8 @@ $(document).ready(function () {
 
         // Transactie cost
         if (0 != sum) {
-            sum += 0.29;
-            basket.append("<tr><td>#</td><td><h4>Transaction fee</h4></td><td>&euro; 0,29</td><td></td></tr>");
+            sum += 0.35;
+            basket.append("<tr><td>#</td><td><h4>Transaction fee</h4></td><td>&euro; 0,35</td><td></td></tr>");
         } else {
             basket.append("<tr><td colspan='4'>Basket is empty</td>")
         }

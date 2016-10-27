@@ -22,7 +22,7 @@ $(document).ready(function() {
                         message.html("");
                     }, 2000);
                 } else if (e.status == 406) {
-                    body.css("background-color", "orange");
+                    body.css("background-color", "#F09C40");
                     message.html(e.message);
 
                     setTimeout(function(){
@@ -31,7 +31,7 @@ $(document).ready(function() {
                         message.html("");
                     }, 2000);
                 } else {
-                    body.css("background-color", "green");
+                    body.css("background-color", "#2EAE5E");
                     message.html(e.user_name);
 
                     setTimeout(function(){

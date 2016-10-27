@@ -58,6 +58,7 @@ class TicketMapper extends BaseMapper
             ->setMaxSold($data['max_sold'])
             ->setBackground($data['background'])
             ->setMaxHidden($data['max_hidden'])
+            ->setRequiredCH($data['required_ch'])
             ->setUpdatedAt($data['updated_at'])
             ->setCreatedAt($data['created_at'])
             ->setSold(

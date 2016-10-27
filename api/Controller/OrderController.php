@@ -46,7 +46,7 @@ class OrderController extends BaseController
             }
             $amount += $ticket->getAmount();
         };
-        $amount += 0.29;
+        $amount += 0.35;
 
         $payments = $this->_createMollieOrder($amount);
         foreach ($data as $item) {

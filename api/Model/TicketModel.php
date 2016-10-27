@@ -27,6 +27,8 @@ class TicketModel extends BaseModel
 
     public $max_hidden = 0;
 
+    public $requiredCH;
+
     /**
      * @return mixed
      */
@@ -239,6 +241,25 @@ class TicketModel extends BaseModel
     public function setMaxHidden($max_hidden)
     {
         $this->max_hidden = $max_hidden;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRequiredCH()
+    {
+        return $this->requiredCH;
+    }
+
+    /**
+     * @param mixed $requiredCH
+     *
+     * @return TicketModel
+     */
+    public function setRequiredCH($requiredCH)
+    {
+        $this->requiredCH = $requiredCH;
         return $this;
     }
 

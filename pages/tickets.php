@@ -44,6 +44,14 @@
                             <input type="email" class="form-control" id="ticketEmail" placeholder="Email">
                         </div>
 
+                        <div class="checkbox" id="requiredCH" style="display: none;">
+                            <label>
+                                <input type="checkbox" id="checkboxCH"> I'm a CH member or board member of another
+                                study
+                                association.
+                            </label>
+                        </div>
+
                         <input type="hidden" id="ticketKey">
                         <input type="hidden" id="ticketName">
                         <input type="hidden" id="ticketAmount">
@@ -114,7 +122,7 @@
                 </div>
             </div>
             <a href="#" data-toggle="modal" data-target="#ticketModal" class="btn btn-default ticket-button"
-               data-key="%key%" data-ticket="%name%" data-amount="%amount%">
+               data-key="%key%" data-ticket="%name%" data-required="%requiredCH%" data-amount="%amount%">
                 Add ticket to basket!
             </a>
         </div>

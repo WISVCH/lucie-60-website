@@ -25,7 +25,7 @@ $tickets = new \Controller\TicketController();
         }
 
         body {
-            position: relative
+            position: relative;
             display: block;
 
             overflow: hidden;

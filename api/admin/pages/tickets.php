@@ -20,6 +20,7 @@ if (isset($_POST['addTicket'])) {
         ->setAmount($_POST['amount'])
         ->setBackground($_POST['background'])
         ->setDate($_POST['date'])
+        ->setName($_POST['name'])
         ->setMaxSold($_POST['max_sold'])
         ->setDescription($_POST['description'])
         ->setMaxHidden($_POST['max_hidden']);
@@ -50,6 +51,7 @@ include_once "components/navbar.php"
                     <th>Date</th>
                     <th>Sold</th>
                     <th>Available</th>
+                    <th>Hidden</th>
                     <th>Background</th>
                     <th></th>
                 </tr>
@@ -66,6 +68,7 @@ include_once "components/navbar.php"
                             <td class='clickable'>" . $ticket->getDate() . "</td>
                             <td class='clickable'>" . $ticket->getSold() . "/" . $ticket->getMaxSold() . "</td>
                             <td class='clickable'>" . $ticket->getAvailable() . "</td>
+                            <td class='clickable'>" . $ticket->getMaxHidden() . "</td>
                             <td class='clickable'><a href='" . $ticket->getBackground() . "'>" . substr($ticket->getBackground(), 0,
                             20) .
                         "...</a></td>
