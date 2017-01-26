@@ -13,7 +13,7 @@ define("DB_PREFIX", "prefix_");
 
 
 // Mollie
-define("MOLLIE_KEY", "test_4c4S5pn4N58rAEncrr3RdQNhVPVyAf");
+define("MOLLIE_KEY", "your_mollie_test_key");
 
 $GLOBALS['database'] = new MysqliDb([
         'host' => DB_HOST,
